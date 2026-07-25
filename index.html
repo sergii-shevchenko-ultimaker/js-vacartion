@@ -697,6 +697,172 @@
             box-shadow: 0 0 6px var(--accent-gold);
         }
 
+        /* Booking Manager & Price Tracking */
+        .booking-summary-banner {
+            background: linear-gradient(135deg, rgba(15, 118, 110, 0.2), rgba(30, 41, 59, 0.8));
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .booking-stat-box {
+            background: rgba(15, 23, 42, 0.4);
+            padding: 1rem 1.25rem;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .booking-stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .booking-stat-val {
+            font-size: 1.75rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            color: var(--text-main);
+        }
+        .variance-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.4rem;
+        }
+        .variance-badge.saved {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+        .variance-badge.over {
+            background: rgba(244, 63, 94, 0.2);
+            color: #f43f5e;
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        .booking-tracker-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .booking-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.2fr 1.2fr 1fr;
+            gap: 1.25rem;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+        @media (max-width: 1024px) {
+            .booking-card {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        .booking-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        .booking-icon-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .booking-category-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: rgba(13, 148, 136, 0.15);
+            color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        .booking-title-main {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-main);
+        }
+        .booking-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+        .booking-status-select {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--glass-border);
+            color: var(--text-main);
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            width: 100%;
+        }
+        .booking-status-select.status-booked {
+            border-color: #10b981;
+            color: #34d399;
+            background: rgba(16, 185, 129, 0.15);
+        }
+        .booking-status-select.status-progress {
+            border-color: #f59e0b;
+            color: #fbbf24;
+            background: rgba(245, 158, 11, 0.15);
+        }
+        .booking-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        .booking-input-group label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+        .booking-input {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--glass-border);
+            color: var(--text-main);
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            width: 100%;
+        }
+        .book-direct-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .book-direct-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+            color: white;
+        }
+
         /* Itinerary Scenic Image */
         .day-sight-image {
             height: 380px;
@@ -1132,6 +1298,9 @@
             <button class="tab-btn" onclick="switchTab('checklist')">
                 <i class="fa-solid fa-suitcase"></i> Packing List
             </button>
+            <button class="tab-btn" onclick="switchTab('booking')">
+                <i class="fa-solid fa-clipboard-check"></i> Booking Manager
+            </button>
             <button class="tab-btn" onclick="switchTab('budget')">
                 <i class="fa-solid fa-chart-pie"></i> Budget Tool
             </button>
@@ -1270,6 +1439,21 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Booking Manager Panel -->
+        <div id="booking" class="panel">
+            <h2 class="section-title"><i class="fa-solid fa-clipboard-check"></i> Booking Manager & Live Price Tracker</h2>
+            
+            <!-- Summary Banner -->
+            <div class="booking-summary-banner" id="booking-summary-banner-el">
+                <!-- Filled dynamically -->
+            </div>
+
+            <!-- Booking Cards Tracker Grid -->
+            <div class="booking-tracker-grid" id="booking-tracker-grid-el">
+                <!-- Booking items generated dynamically based on active trip -->
             </div>
         </div>
     </div>
@@ -5089,8 +5273,15 @@
                 btn.classList.remove('active');
             });
             
-            document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
+            const targetPanel = document.getElementById(tabId);
+            if (targetPanel) targetPanel.classList.add('active');
+            
+            if (window.event && window.event.currentTarget && window.event.currentTarget.classList) {
+                window.event.currentTarget.classList.add('active');
+            } else {
+                const btn = document.querySelector(`.tab-btn[onclick*="${tabId}"]`);
+                if (btn) btn.classList.add('active');
+            }
 
             if (tabId === 'itinerary' && map) {
                 // Wait slightly for layout rendering before updating Leaflet container boundaries
@@ -5098,6 +5289,8 @@
                     map.invalidateSize();
                     onDayChangeRefit();
                 }, 100);
+            } else if (tabId === 'booking') {
+                renderBookingTracker();
             }
         }
 
@@ -5251,17 +5444,49 @@
             const totalNice = niceNight * niceNights;
             const totalItaly = italyNight * italyNights;
             const totalFood = food * totalDays;
+
+            // Check if user has entered actual booked prices in Booking Manager
+            const currentTrip = document.getElementById('trip-dropdown') ? document.getElementById('trip-dropdown').value : 'riviera';
+            const tripBookings = (typeof userBookings !== 'undefined' && userBookings[currentTrip]) || {};
             
-            const total = flight + car + totalNice + totalItaly + totalFood + activities;
+            let finalFlight = flight;
+            let flightTag = '';
+            if (tripBookings['flight'] && tripBookings['flight'].price !== '' && tripBookings['flight'].price !== undefined) {
+                finalFlight = parseFloat(tripBookings['flight'].price) || 0;
+                flightTag = ' (Actual)';
+            }
+            
+            let finalCar = car;
+            let carTag = '';
+            if (tripBookings['car'] && tripBookings['car'].price !== '' && tripBookings['car'].price !== undefined) {
+                finalCar = parseFloat(tripBookings['car'].price) || 0;
+                carTag = ' (Actual)';
+            }
+            
+            let finalNice = totalNice;
+            let niceTag = '';
+            if (tripBookings['hotel1'] && tripBookings['hotel1'].price !== '' && tripBookings['hotel1'].price !== undefined) {
+                finalNice = parseFloat(tripBookings['hotel1'].price) || 0;
+                niceTag = ' (Actual)';
+            }
+            
+            let finalItaly = totalItaly;
+            let italyTag = '';
+            if (tripBookings['hotel2'] && tripBookings['hotel2'].price !== '' && tripBookings['hotel2'].price !== undefined) {
+                finalItaly = parseFloat(tripBookings['hotel2'].price) || 0;
+                italyTag = ' (Actual)';
+            }
+            
+            const total = finalFlight + finalCar + finalNice + finalItaly + totalFood + activities;
             
             // Format output
-            document.getElementById('budget-total').innerText = '€' + total.toLocaleString();
-            document.getElementById('bd-flights').innerText = '€' + flight.toLocaleString();
-            document.getElementById('bd-car').innerText = '€' + car.toLocaleString();
-            document.getElementById('bd-nice').innerText = '€' + totalNice.toLocaleString();
-            document.getElementById('bd-italy').innerText = '€' + totalItaly.toLocaleString();
-            document.getElementById('bd-food').innerText = '€' + totalFood.toLocaleString();
-            document.getElementById('bd-activities').innerText = '€' + activities.toLocaleString();
+            document.getElementById('budget-total').innerText = '€' + Math.round(total).toLocaleString();
+            document.getElementById('bd-flights').innerText = '€' + Math.round(finalFlight).toLocaleString() + flightTag;
+            document.getElementById('bd-car').innerText = '€' + Math.round(finalCar).toLocaleString() + carTag;
+            document.getElementById('bd-nice').innerText = '€' + Math.round(finalNice).toLocaleString() + niceTag;
+            document.getElementById('bd-italy').innerText = '€' + Math.round(finalItaly).toLocaleString() + italyTag;
+            document.getElementById('bd-food').innerText = '€' + Math.round(totalFood).toLocaleString();
+            document.getElementById('bd-activities').innerText = '€' + Math.round(activities).toLocaleString();
             
             // Limit checks (Budget Goal €5,000, Max Flex €7,000)
             const meterBar = document.getElementById('budget-bar');
@@ -5276,13 +5501,13 @@
                 statusEl.innerText = "Within Budget Target";
                 statusEl.className = "budget-status under";
                 const remaining = 5000 - total;
-                pocketEl.innerText = '+€' + remaining.toLocaleString();
+                pocketEl.innerText = '+€' + Math.round(remaining).toLocaleString();
                 pocketEl.style.color = '#10b981';
             } else if (total <= 7000) {
                 statusEl.innerText = "Within Flexible Budget Limit";
                 statusEl.className = "budget-status warning";
                 const remaining = 7000 - total;
-                pocketEl.innerText = '+€' + remaining.toLocaleString() + ' (of Flex Limit)';
+                pocketEl.innerText = '+€' + Math.round(remaining).toLocaleString() + ' (of Flex Limit)';
                 pocketEl.style.color = '#f59e0b';
             } else {
                 statusEl.innerText = "Exceeds Budget Limit!";
@@ -5543,6 +5768,11 @@
                                 <span>Class & Tag:</span>
                                 <span style="color:var(--accent-gold); font-weight:700;">${f.tag}</span>
                             </div>
+                            <div style="margin-top: 0.85rem;">
+                                <a href="https://www.google.com/travel/flights?q=flights+from+${f.origin}+to+${f.dest}+in+september+2026" target="_blank" class="book-direct-btn" style="width:100%;">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Book / Check Fares on Google Flights
+                                </a>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -5599,7 +5829,10 @@
                                         <span class="hotel-price-label">Cost / Night (2 adults)</span>
                                         <span class="hotel-price">~€${hotel.price}</span>
                                     </div>
-                                    <button class="hotel-select-btn ${selClass}" onclick="if(event.currentTarget.closest('.hotels-grid').parentElement.innerHTML.includes('${tripData.base1Name}')) selectNiceHotel('${hotel.name}', ${hotel.price}); else selectItalyHotel('${hotel.name}', ${hotel.price});">${selText}</button>
+                                    <div style="display:flex; gap:0.5rem; align-items:center;">
+                                        <button class="hotel-select-btn ${selClass}" onclick="if(event.currentTarget.closest('.hotels-grid').parentElement.innerHTML.includes('${tripData.base1Name}')) selectNiceHotel('${hotel.name}', ${hotel.price}); else selectItalyHotel('${hotel.name}', ${hotel.price});">${selText}</button>
+                                        <a href="https://www.booking.com/searchresults.html?ss=${encodeURIComponent(hotel.name + ' ' + tripData.title)}" target="_blank" class="book-direct-btn" style="padding: 0.5rem 0.75rem;" title="Book on Booking.com"><i class="fa-solid fa-arrow-up-right-from-square"></i> Booking.com</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -5641,7 +5874,218 @@
             // 8. Load Day 1 details and map view
             showDay(1);
 
-            // 9. Re-run budget calculation
+            // 9. Re-run budget calculation & render booking tracker
+            calculateBudget();
+            renderBookingTracker();
+        }
+
+        // Booking Tracker & Manager State Management
+        let userBookings = {};
+        
+        function loadUserBookings() {
+            try {
+                const stored = localStorage.getItem('vacation_planner_user_bookings');
+                if (stored) {
+                    userBookings = JSON.parse(stored);
+                }
+            } catch (e) {
+                userBookings = {};
+            }
+        }
+        
+        function saveUserBookings() {
+            try {
+                localStorage.setItem('vacation_planner_user_bookings', JSON.stringify(userBookings));
+            } catch (e) {}
+        }
+        
+        loadUserBookings();
+
+        function renderBookingTracker() {
+            const dropdown = document.getElementById('trip-dropdown');
+            if (!dropdown) return;
+            const currentTrip = dropdown.value;
+            const tripData = trips[currentTrip];
+            if (!tripData) return;
+            
+            if (!userBookings[currentTrip]) {
+                userBookings[currentTrip] = {};
+            }
+            const tripBookings = userBookings[currentTrip];
+
+            const flightOpt = (tripData.flights && tripData.flights[0]) || { origin: 'AMS', dest: 'NCE', price: tripData.defaults.flight, carrier: 'Airline' };
+            const selHotel1 = (tripData.hotels && tripData.hotels[0]?.list.find(h => h.selected) || tripData.hotels[0]?.list[0]) || { name: tripData.base1Name, price: tripData.defaults.hotel1 };
+            const base1Nights = 5;
+            
+            const hasBase2 = tripData.hotels && tripData.hotels[1] && tripData.hotels[1].list.length > 0;
+            const selHotel2 = hasBase2 ? ((tripData.hotels[1].list.find(h => h.selected) || tripData.hotels[1].list[0]) || { name: tripData.base2Name, price: tripData.defaults.hotel2 }) : null;
+            const base2Nights = hasBase2 ? 5 : 0;
+
+            const googleFlightsUrl = `https://www.google.com/travel/flights?q=flights+from+${flightOpt.origin}+to+${flightOpt.dest}+in+september+2026`;
+            const rentalcarsUrl = `https://www.rentalcars.com/search-results?location=${flightOpt.dest}`;
+            const bookingHotel1Url = `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(selHotel1.name + ' ' + tripData.title)}`;
+            const bookingHotel2Url = selHotel2 ? `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(selHotel2.name + ' ' + tripData.title)}` : '';
+
+            const items = [
+                {
+                    id: 'flight',
+                    icon: 'fa-plane',
+                    title: `Flight Tickets (${flightOpt.origin} → ${flightOpt.dest})`,
+                    subtitle: `Dates: Sep 2 – Sep 12, 2026 (2 Passengers, ${flightOpt.carrier})`,
+                    estPrice: flightOpt.price || tripData.defaults.flight,
+                    bookUrl: googleFlightsUrl,
+                    providerName: "Google Flights"
+                },
+                {
+                    id: 'car',
+                    icon: 'fa-car',
+                    title: `Rental Car & Insurance (${flightOpt.dest} Airport)`,
+                    subtitle: `Dates: Sep 2 – Sep 12, 2026 (Compact / SUV, Unlimited Mileage)`,
+                    estPrice: tripData.defaults.car,
+                    bookUrl: rentalcarsUrl,
+                    providerName: "Rentalcars.com"
+                },
+                {
+                    id: 'hotel1',
+                    icon: 'fa-hotel',
+                    title: `Base 1 Hotel: ${selHotel1.name}`,
+                    subtitle: `Check-in: Sep 2 | Check-out: Sep ${2 + base1Nights} (${base1Nights} Nights, 2 Guests)`,
+                    estPrice: selHotel1.price * base1Nights,
+                    bookUrl: bookingHotel1Url,
+                    providerName: "Booking.com"
+                }
+            ];
+
+            if (hasBase2 && selHotel2) {
+                items.push({
+                    id: 'hotel2',
+                    icon: 'fa-hotel',
+                    title: `Base 2 Hotel: ${selHotel2.name}`,
+                    subtitle: `Check-in: Sep ${2 + base1Nights} | Check-out: Sep 12 (${base2Nights} Nights, 2 Guests)`,
+                    estPrice: selHotel2.price * base2Nights,
+                    bookUrl: bookingHotel2Url,
+                    providerName: "Booking.com"
+                });
+            }
+
+            if (currentTrip === 'skye') {
+                items.push({
+                    id: 'ferry_skye',
+                    icon: 'fa-ship',
+                    title: 'CalMac Ferry (Uig, Skye → Tarbert, Harris)',
+                    subtitle: 'Car + 2 Passengers Round-trip Ferry Crossing',
+                    estPrice: 75,
+                    bookUrl: 'https://www.calmac.co.uk/',
+                    providerName: 'CalMac Ferries'
+                });
+            } else if (currentTrip === 'faroe') {
+                items.push({
+                    id: 'ferry_faroe',
+                    icon: 'fa-ship',
+                    title: 'Kalsoy Island Ferry & Vestmanna Boat Tour',
+                    subtitle: 'Ferry to Kalsoy + Vestmanna Sea Cliffs Boat Tickets',
+                    estPrice: 90,
+                    bookUrl: 'https://www.ssl.fo/',
+                    providerName: 'SSL.fo Ferries'
+                });
+            }
+
+            let totalEst = 0;
+            let totalActualBooked = 0;
+            let bookedCount = 0;
+
+            let gridHtml = '';
+            items.forEach(item => {
+                const bData = tripBookings[item.id] || { status: 'not_booked', ref: '', price: '' };
+                const isBooked = bData.status === 'booked';
+                
+                totalEst += item.estPrice;
+                if (bData.price !== '' && bData.price !== undefined) {
+                    totalActualBooked += parseFloat(bData.price) || 0;
+                } else if (isBooked) {
+                    totalActualBooked += item.estPrice;
+                }
+                
+                if (isBooked) bookedCount++;
+
+                const statusClass = bData.status === 'booked' ? 'status-booked' : (bData.status === 'in_progress' ? 'status-progress' : '');
+
+                gridHtml += `
+                    <div class="booking-card">
+                        <div class="booking-icon-title">
+                            <div class="booking-category-icon">
+                                <i class="fa-solid ${item.icon}"></i>
+                            </div>
+                            <div>
+                                <div class="booking-title-main">${item.title}</div>
+                                <div class="booking-subtitle">${item.subtitle}</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <select class="booking-status-select ${statusClass}" onchange="updateBookingField('${currentTrip}', '${item.id}', 'status', this.value)">
+                                <option value="not_booked" ${bData.status === 'not_booked' ? 'selected' : ''}>⚪ Not Booked</option>
+                                <option value="in_progress" ${bData.status === 'in_progress' ? 'selected' : ''}>🟡 In Progress</option>
+                                <option value="booked" ${bData.status === 'booked' ? 'selected' : ''}>🟢 Booked</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-input-group">
+                            <label>Conf / Ref #</label>
+                            <input type="text" class="booking-input" placeholder="e.g. PNR-9281" value="${bData.ref || ''}" onchange="updateBookingField('${currentTrip}', '${item.id}', 'ref', this.value)">
+                        </div>
+
+                        <div class="booking-input-group">
+                            <label>Actual Paid (€)</label>
+                            <input type="number" class="booking-input" placeholder="Est: €${item.estPrice}" value="${bData.price !== undefined ? bData.price : ''}" onchange="updateBookingField('${currentTrip}', '${item.id}', 'price', this.value)">
+                        </div>
+
+                        <div>
+                            <a href="${item.bookUrl}" target="_blank" class="book-direct-btn">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> ${item.providerName}
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            const gridEl = document.getElementById('booking-tracker-grid-el');
+            if (gridEl) gridEl.innerHTML = gridHtml;
+
+            const variance = totalActualBooked - totalEst;
+            const varianceBadge = totalActualBooked > 0 ? (
+                variance <= 0 
+                ? `<div class="variance-badge saved"><i class="fa-solid fa-circle-check"></i> Saved €${Math.abs(Math.round(variance)).toLocaleString()} vs estimate</div>`
+                : `<div class="variance-badge over"><i class="fa-solid fa-triangle-exclamation"></i> +€${Math.round(variance).toLocaleString()} over estimate</div>`
+            ) : '<div class="variance-badge" style="background:rgba(255,255,255,0.05); color:var(--text-muted);">Enter actual prices to track savings</div>';
+
+            const bannerHtml = `
+                <div class="booking-stat-box">
+                    <div class="booking-stat-label">Booking Progress</div>
+                    <div class="booking-stat-val">${bookedCount} of ${items.length} Booked</div>
+                </div>
+                <div class="booking-stat-box">
+                    <div class="booking-stat-label">Estimated Subtotal</div>
+                    <div class="booking-stat-val">€${Math.round(totalEst).toLocaleString()}</div>
+                </div>
+                <div class="booking-stat-box">
+                    <div class="booking-stat-label">Actual Booked Total</div>
+                    <div class="booking-stat-val" style="color: ${totalActualBooked > 0 ? '#34d399' : 'var(--text-main)'}">€${Math.round(totalActualBooked || totalEst).toLocaleString()}</div>
+                    ${varianceBadge}
+                </div>
+            `;
+            const bannerEl = document.getElementById('booking-summary-banner-el');
+            if (bannerEl) bannerEl.innerHTML = bannerHtml;
+        }
+
+        function updateBookingField(tripKey, itemId, field, value) {
+            if (!userBookings[tripKey]) userBookings[tripKey] = {};
+            if (!userBookings[tripKey][itemId]) userBookings[tripKey][itemId] = { status: 'not_booked', ref: '', price: '' };
+            
+            userBookings[tripKey][itemId][field] = value;
+            saveUserBookings();
+            
+            renderBookingTracker();
             calculateBudget();
         }
 
