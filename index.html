@@ -1252,6 +1252,7 @@
                     <!-- Northern & Volcanic Islands Group -->
                     <!-- Camping in the North Group -->
                     <optgroup label="Camping in the North">
+                        <option value="netherlands-caravan">🌷 Grand Netherlands Campervan Tour (Texel & Veluwe)</option>
                         <option value="sweden-caravan">🚐 Kalmar, Öland & Baltic Coast Campervan (Sweden)</option>
                     </optgroup>
                     <optgroup label="Island Wonders">
@@ -1475,6 +1476,692 @@
     <script>
         // Database of Trips (All 9 Trips, 11 Days Each, Fully Mapped!)
         const trips = {
+          "netherlands-caravan": {
+    "title": "Grand Netherlands Campervan Tour (Texel & Veluwe)",
+    "desc": "A 14-night campervan journey for 2 adults through Texel Island sand dunes, Waddenzee UNESCO coast, Giethoorn canals, Veluwe national park, and Kinderdijk windmills in September 2026.",
+    "base1Name": "Texel Island Campsite",
+    "base2Name": "Veluwe Forest Campsite",
+    "defaults": {
+      "flight": 0,
+      "car": 1400,
+      "hotel1": 48,
+      "hotel2": 42,
+      "food": 90,
+      "activities": 180
+    },
+    "packingType": "cool",
+    "advisory": {
+      "weather": "\ud83c\udf42 Mild maritime autumn (~17-20\u00b0C). Pleasant sunny days along the North Sea dunes. Cool coastal breezes (~12\u00b0C) perfect for biking.",
+      "vehicle": "\ud83d\ude90 Campervan / Motorhome (VW California or Fiat Camper). World-class Dutch road infrastructure with excellent cycle paths and dedicated camper parks.",
+      "terrain": "\ud83d\udeb4 Coastal sand dunes, sea dikes, pine forest trails, and flat paved cycle paths. Very easy terrain ideal for biking and walking."
+    },
+    "flights": [
+      {
+        "carrier": "Local Start / NS Train / Drive",
+        "origin": "RTM",
+        "dest": "AMS",
+        "price": 0,
+        "time": "Local Departure (Pick up Campervan at Rotterdam / Amsterdam Depot)",
+        "tag": "Local Start (Preferred)"
+      }
+    ],
+    "hotels": [
+      {
+        "category": "Base 1 (Nights 1 - 7 on Texel Island & Wadden Coast)",
+        "list": [
+          {
+            "name": "Camping Kogerstrand Texel",
+            "rating": "9.2 Superb",
+            "stars": 4,
+            "price": 48,
+            "coords": [
+              53.0986,
+              4.7619
+            ],
+            "desc": "Camper pitches nestled directly inside Texel's coastal sand dunes, walking distance to the North Sea beach.",
+            "selected": true,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Texel_Slufter_2011.jpg/1280px-Texel_Slufter_2011.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/De_Vuurtoren_Texel.jpg/1280px-De_Vuurtoren_Texel.jpg"
+            ]
+          },
+          {
+            "name": "Vakantiepark De Krim Texel",
+            "rating": "9.4 Exceptional",
+            "stars": 5,
+            "price": 55,
+            "coords": [
+              53.165,
+              4.85
+            ],
+            "desc": "Five-star resort in northern Texel near Cocksdorp lighthouse with indoor/outdoor pools and electric bike rentals.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/De_Vuurtoren_Texel.jpg/1280px-De_Vuurtoren_Texel.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Texel_Slufter_2011.jpg/1280px-Texel_Slufter_2011.jpg"
+            ]
+          },
+          {
+            "name": "Camping Sea Finder Lauwersoog",
+            "rating": "8.9 Very Good",
+            "stars": 4,
+            "price": 40,
+            "coords": [
+              53.3667,
+              6.2
+            ],
+            "desc": "Waterfront campsite on the Wadden Sea UNESCO dark sky reserve with sea seal boat excursions.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Afsluitdijk_view.jpg/1280px-Afsluitdijk_view.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Giethoorn_canals.jpg/1280px-Giethoorn_canals.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Base 2 (Nights 8 - 14 in Veluwe National Park & Lakes)",
+        "list": [
+          {
+            "name": "Camping Landal Coldenhove Veluwe",
+            "rating": "9.1 Superb",
+            "stars": 4,
+            "price": 42,
+            "coords": [
+              52.08,
+              6.02
+            ],
+            "desc": "Scenic camper park surrounded by ancient pine forests and wild red deer near De Posbank heather hills.",
+            "selected": true,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/De_Hoge_Veluwe.jpg/1280px-De_Hoge_Veluwe.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kinderdijk_windmills.jpg/1280px-Kinderdijk_windmills.jpg"
+            ]
+          },
+          {
+            "name": "Familiecamping De Knipe Giethoorn",
+            "rating": "9.3 Exceptional",
+            "stars": 4,
+            "price": 45,
+            "coords": [
+              52.7397,
+              6.0772
+            ],
+            "desc": "Waterfront camper pitch with electric whisper boat launch directly onto Giethoorn thatched canals.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Giethoorn_canals.jpg/1280px-Giethoorn_canals.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/De_Hoge_Veluwe.jpg/1280px-De_Hoge_Veluwe.jpg"
+            ]
+          },
+          {
+            "name": "Camping De Witteromer Drenthe",
+            "rating": "8.8 Very Good",
+            "stars": 4,
+            "price": 38,
+            "coords": [
+              52.98,
+              6.55
+            ],
+            "desc": "Tucked into Drenthe's heather moorlands and ancient megalithic hunebedden prehistoric tombs.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/De_Hoge_Veluwe.jpg/1280px-De_Hoge_Veluwe.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kinderdijk_windmills.jpg/1280px-Kinderdijk_windmills.jpg"
+            ]
+          }
+        ]
+      }
+    ],
+    "itinerary": {
+      "1": {
+        "num": "Day 1",
+        "title": "Campervan Pickup & Drive to Den Helder Harbor",
+        "location": "Den Helder",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/f/fe/Dok_-_Dock_Yard_%283825742184%29.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/IJmuiden_docks_being_bombed_in_1943.jpg/1280px-IJmuiden_docks_being_bombed_in_1943.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Netherlands_%2814377592196%29.jpg/1280px-Netherlands_%2814377592196%29.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "11:00",
+            "title": "Pick up Campervan at Depot",
+            "desc": "Pick up fully equipped campervan, complete vehicle check, and load groceries.",
+            "coords": [
+              52.3676,
+              4.9041
+            ]
+          },
+          {
+            "time": "14:30",
+            "title": "Scenic Drive through North Holland Polders",
+            "desc": "Drive through historic polder landscapes and windmill dikes to Den Helder.",
+            "coords": [
+              52.9,
+              4.8
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Den Helder Harbor Dinner",
+            "desc": "Seafood dinner at Willemsoord historic naval dockyard.",
+            "coords": [
+              52.9567,
+              4.76
+            ]
+          }
+        ]
+      },
+      "2": {
+        "num": "Day 2",
+        "title": "Ferry to Texel Island & De Slufter Nature Reserve Dunes",
+        "location": "De Slufter, Texel",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Texel_De_Slufter_04.jpg/1280px-Texel_De_Slufter_04.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Texel_De_Slufter_06.jpg/1280px-Texel_De_Slufter_06.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Texel_De_Slufter_08.jpg/1280px-Texel_De_Slufter_08.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "20-Min TESO Ferry Crossing to Texel",
+            "desc": "Sail across the Wadden Sea with campervan to Texel Island.",
+            "coords": [
+              53.0033,
+              4.7869
+            ]
+          },
+          {
+            "time": "12:30",
+            "title": "Setup Campervan at Kogerstrand Dunes",
+            "desc": "Park camper pitch right inside the coastal dune reserve.",
+            "coords": [
+              53.0986,
+              4.7619
+            ]
+          },
+          {
+            "time": "15:00",
+            "title": "Hike De Slufter Tidal Dune Valley",
+            "desc": "Walk the unique tidal inlet where salt water flows freely into sand dunes.",
+            "coords": [
+              53.1344,
+              4.8167
+            ]
+          }
+        ]
+      },
+      "3": {
+        "num": "Day 3",
+        "title": "Ecomare Marine Sanctuary & Texel Red Lighthouse",
+        "location": "Texel Lighthouse",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/De_Cocksdorp%2C_vuurtoren_Eierland_RM35278_IMG_6024_2020-06-07_11.32.jpg/1280px-De_Cocksdorp%2C_vuurtoren_Eierland_RM35278_IMG_6024_2020-06-07_11.32.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/De_Cocksdorp_%28NL%29%2C_Leuchtturm_--_2026_--_0305.jpg/1280px-De_Cocksdorp_%28NL%29%2C_Leuchtturm_--_2026_--_0305.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Eierland_Lighthouse%2C_Texel%2C_The_Netherlands%2C_2019-07-21.jpg/1280px-Eierland_Lighthouse%2C_Texel%2C_The_Netherlands%2C_2019-07-21.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Ecomare Seal Rescue Sanctuary",
+            "desc": "Visit rescued Wadden Sea seals and porpoises at Ecomare marine museum.",
+            "coords": [
+              53.08,
+              4.745
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Climb Texel's Bright Red Lighthouse",
+            "desc": "Ascend 118 steps up Eierland Lighthouse for panoramic views over Wadden Sea & North Sea.",
+            "coords": [
+              53.1819,
+              4.8622
+            ]
+          },
+          {
+            "time": "16:30",
+            "title": "De Cocksdorp Harbor Sunset Fika",
+            "desc": "Enjoy Texel craft beer (Skuumkoppe) at northern harbor pavilion.",
+            "coords": [
+              53.165,
+              4.85
+            ]
+          }
+        ]
+      },
+      "4": {
+        "num": "Day 4",
+        "title": "Cycling the Texel West Coast Dunes & Beach Pavilion Sunset",
+        "location": "De Koog, Texel",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Texel_-_North_Sea_Beach_%26_Dunes_at_Eierlandse_Vuurtoren_02.jpg/1280px-Texel_-_North_Sea_Beach_%26_Dunes_at_Eierlandse_Vuurtoren_02.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Texel_-_North_Sea_Beach_%26_Dunes_at_Eierlandse_Vuurtoren_06.jpg/1280px-Texel_-_North_Sea_Beach_%26_Dunes_at_Eierlandse_Vuurtoren_06.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Texel_-_North_Sea_Beach_%26_Dunes_at_Eierlandse_Vuurtoren_08.jpg/1280px-Texel_-_North_Sea_Beach_%26_Dunes_at_Eierlandse_Vuurtoren_08.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Cycle National Park Dunes of Texel",
+            "desc": "Pedal 25km paved cycle path winding through heather moorland and pine woods.",
+            "coords": [
+              53.0986,
+              4.7619
+            ]
+          },
+          {
+            "time": "13:00",
+            "title": "Den Burg Historic Farmers Market",
+            "desc": "Sample award-winning Texel sheep cheeses and smoked sausage in Den Burg.",
+            "coords": [
+              53.055,
+              4.7983
+            ]
+          },
+          {
+            "time": "17:00",
+            "title": "Beach Pavilion Paal 17 Sunset Dinner",
+            "desc": "Relax with sea views at Paal 17 beach pavilion.",
+            "coords": [
+              53.078,
+              4.733
+            ]
+          }
+        ]
+      },
+      "5": {
+        "num": "Day 5",
+        "title": "Den Oever Afsluitdijk Causeway & Harlingen Historic Harbor",
+        "location": "Afsluitdijk",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Afsluitdijk_1031.jpg/1280px-Afsluitdijk_1031.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Afsluitdijk_Netherlands_Satellite_Photo_by_Sentinel-2_30_June_2018.jpg/1280px-Afsluitdijk_Netherlands_Satellite_Photo_by_Sentinel-2_30_June_2018.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Monument_afsluitdijk_en_omgeving_28-06-2019._%28actm.%29_11.jpg/1280px-Monument_afsluitdijk_en_omgeving_28-06-2019._%28actm.%29_11.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Ferry Back & Drive 32km Afsluitdijk Causeway",
+            "desc": "Drive across the iconic engineering marvel separating the Wadden Sea from IJsselmeer.",
+            "coords": [
+              52.93,
+              5.08
+            ]
+          },
+          {
+            "time": "13:00",
+            "title": "Harlingen Historic Canal & Clipper Harbor",
+            "desc": "Stroll Friesland's only seaport town filled with 16th-century stepped gables.",
+            "coords": [
+              53.175,
+              5.4167
+            ]
+          },
+          {
+            "time": "16:00",
+            "title": "Check into Friesland Camper Park",
+            "desc": "Setup campervan along the Friesland canal waterway.",
+            "coords": [
+              53.18,
+              5.5
+            ]
+          }
+        ]
+      },
+      "6": {
+        "num": "Day 6",
+        "title": "Franeker Planetarium & Friesland Lakes Boat Excursion",
+        "location": "Franeker",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/20140530_Eise_Eisingastraat_1-2-3_%28Eise_Eisinga_Planetarium%29_Franeker_Fr_NL.jpg/1280px-20140530_Eise_Eisingastraat_1-2-3_%28Eise_Eisinga_Planetarium%29_Franeker_Fr_NL.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Eise_Eisinga_Planetarium_IMG_4395_%2840910186195%29.jpg/1280px-Eise_Eisinga_Planetarium_IMG_4395_%2840910186195%29.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Eise_Eisinga_Planetarium_IMG_4396_%2840910191075%29.jpg/1280px-Eise_Eisinga_Planetarium_IMG_4396_%2840910191075%29.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Visit World's Oldest Working Planetarium",
+            "desc": "Marvel at the 1781 UNESCO Eise Eisinga Planetarium built in a living room ceiling.",
+            "coords": [
+              53.1872,
+              5.5408
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Electric Sloop Boat Ride on Sneekermeer",
+            "desc": "Pilot a quiet electric sloop boat through Friesland's interconnected lakes.",
+            "coords": [
+              53.0333,
+              5.7
+            ]
+          },
+          {
+            "time": "17:00",
+            "title": "Waterfront Terrace Dinner",
+            "desc": "Traditional Frisian sugar bread (S\u00fbkerb\u00f4le) and fresh smoked eel dinner.",
+            "coords": [
+              53.0333,
+              5.66
+            ]
+          }
+        ]
+      },
+      "7": {
+        "num": "Day 7",
+        "title": "Lauwersmeer UNESCO Dark Sky Reserve & Mudflat Walk",
+        "location": "Lauwersmeer",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Bloemknop_gewone_berenklauw_%28Heracleum_sphondylium%29._Locatie._Nationaal_Park_Lauwersmeer_01.jpg/1280px-Bloemknop_gewone_berenklauw_%28Heracleum_sphondylium%29._Locatie._Nationaal_Park_Lauwersmeer_01.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Bruggetje_bij_observatietoren._Locatie._Nationaal_Park_Lauwersmeer_01.jpg/1280px-Bruggetje_bij_observatietoren._Locatie._Nationaal_Park_Lauwersmeer_01.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Bruggetje_bij_observatietoren._Locatie._Nationaal_Park_Lauwersmeer_in_Groningen.jpg/1280px-Bruggetje_bij_observatietoren._Locatie._Nationaal_Park_Lauwersmeer_in_Groningen.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Wadden Sea Wadlopen (Mudflat Walking)",
+            "desc": "Guided walk across the sea bed at low tide in the UNESCO Wadden Sea World Heritage.",
+            "coords": [
+              53.4,
+              6.2
+            ]
+          },
+          {
+            "time": "14:00",
+            "title": "Lauwersmeer Birdwatching Safari",
+            "desc": "Spot white-tailed sea eagles and Konik wild horses in the national park.",
+            "coords": [
+              53.3667,
+              6.2
+            ]
+          },
+          {
+            "time": "21:30",
+            "title": "Dark Sky Stargazing Night",
+            "desc": "Experience unpolluted starlight in one of Europe's official Dark Sky Parks.",
+            "coords": [
+              53.3667,
+              6.2
+            ]
+          }
+        ]
+      },
+      "8": {
+        "num": "Day 8",
+        "title": "Giethoorn 'Venice of the North' Canal Boat Exploration",
+        "location": "Giethoorn",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Giethoorn_Netherlands_Channels-and-houses-of-Giethoorn-05.jpg/1280px-Giethoorn_Netherlands_Channels-and-houses-of-Giethoorn-05.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Giethoorn_Netherlands_Channels-and-houses-of-Giethoorn-06.jpg/1280px-Giethoorn_Netherlands_Channels-and-houses-of-Giethoorn-06.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Giethoorn_Netherlands_Channels-and-houses-of-Giethoorn-07.jpg/1280px-Giethoorn_Netherlands_Channels-and-houses-of-Giethoorn-07.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Drive South to Car-Free Giethoorn",
+            "desc": "Caravan drive to Giethoorn, the fairytale canal village with no roads.",
+            "coords": [
+              52.7397,
+              6.0772
+            ]
+          },
+          {
+            "time": "11:00",
+            "title": "Private Whisper Boat Canal Cruise",
+            "desc": "Navigate silent electric boat under 170 wooden footbridges and past thatched farmhouses.",
+            "coords": [
+              52.7397,
+              6.0772
+            ]
+          },
+          {
+            "time": "15:30",
+            "title": "Weerribben-Wieden Marshland Kayak",
+            "desc": "Paddle through serene water reed beds in Weerribben National Park.",
+            "coords": [
+              52.76,
+              5.98
+            ]
+          }
+        ]
+      },
+      "9": {
+        "num": "Day 9",
+        "title": "Drenthe Ancient Megalithic Hunebedden Trail",
+        "location": "Borger, Drenthe",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/2005-07_Borger_Hunebedden_Centrum.JPG/1280px-2005-07_Borger_Hunebedden_Centrum.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/2005-07_Borger_Hunebedden_Centrum_03.JPG/1280px-2005-07_Borger_Hunebedden_Centrum_03.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/2005-07_Borger_Hunebedden_Centrum_04.JPG/1280px-2005-07_Borger_Hunebedden_Centrum_04.JPG"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Hunebedcentrum Prehistoric Tomb D27",
+            "desc": "Explore 5,000-year-old giant stone megalithic tombs older than the pyramids.",
+            "coords": [
+              52.925,
+              6.7944
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Drents-Friese Wold Pine Forest Trail",
+            "desc": "Walk shifting sand dunes and ancient beech forests in Drenthe.",
+            "coords": [
+              52.9,
+              6.3
+            ]
+          },
+          {
+            "time": "16:30",
+            "title": "Caravan Campfire Night in Forest",
+            "desc": "Park campervan under towering pine trees at Landal Coldenhove.",
+            "coords": [
+              52.08,
+              6.02
+            ]
+          }
+        ]
+      },
+      "10": {
+        "num": "Day 10",
+        "title": "Drive South to De Hoge Veluwe National Park",
+        "location": "Hoge Veluwe",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/At_Hoge_Veluwe_National_Park_%288648910712%29.jpg/960px-At_Hoge_Veluwe_National_Park_%288648910712%29.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/De_Hoge_Veluwe_National_Park.jpg/1280px-De_Hoge_Veluwe_National_Park.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/De_Hoge_Veluwe_National_Park_2.jpg/1280px-De_Hoge_Veluwe_National_Park_2.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Arrive at De Hoge Veluwe Gate",
+            "desc": "Enter 55 sq km national park of sand drifts, heathland, and woodland.",
+            "coords": [
+              52.0986,
+              5.8286
+            ]
+          },
+          {
+            "time": "12:30",
+            "title": "Jachthuis Sint Hubertus Castle Walk",
+            "desc": "Tour the iconic Berlage brick hunting lodge reflecting on the forest lake.",
+            "coords": [
+              52.12,
+              5.83
+            ]
+          },
+          {
+            "time": "16:00",
+            "title": "Red Deer & Wild Boar Wildlife Spotting",
+            "desc": "Observe wild red deer stags in rutting season from wildlife viewing hides.",
+            "coords": [
+              52.1,
+              5.84
+            ]
+          }
+        ]
+      },
+      "11": {
+        "num": "Day 11",
+        "title": "Free White Bike Safari & Kr\u00f6ller-M\u00fcller Sculpture Garden",
+        "location": "Kr\u00f6ller-M\u00fcller Museum",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/20160906_Kroller-Muller_Museum.jpg/1280px-20160906_Kroller-Muller_Museum.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/c/cb/Andrew_Lord_at_the_Kr%C3%B6ller-M%C3%BCller_Museum%2C_2019.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Barberini_August_2023-Jan_Vijlbrief_-_Landschaft_mit_Heuschober%2C_1894_-_Kr%C3%B6ller-M%C3%BCller_Museum%2C_Otterlo-.jpg/1280px-Barberini_August_2023-Jan_Vijlbrief_-_Landschaft_mit_Heuschober%2C_1894_-_Kr%C3%B6ller-M%C3%BCller_Museum%2C_Otterlo-.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Pick up Complimentary White Bike",
+            "desc": "Cycle the park's 40km car-free path using the park's iconic free White Bikes.",
+            "coords": [
+              52.0986,
+              5.8286
+            ]
+          },
+          {
+            "time": "11:00",
+            "title": "Kr\u00f6ller-M\u00fcller Museum & Van Gogh Collection",
+            "desc": "Admire world's second-largest Van Gogh collection and European masters.",
+            "coords": [
+              52.0958,
+              5.8181
+            ]
+          },
+          {
+            "time": "14:30",
+            "title": "Outdoor Sculpture Park Stroll",
+            "desc": "Explore 25-hectare outdoor sculpture park with works by Rodin, Moore, and Dubuffet.",
+            "coords": [
+              52.0958,
+              5.8181
+            ]
+          }
+        ]
+      },
+      "12": {
+        "num": "Day 12",
+        "title": "Posbank Purple Heather Hills & De Posbank Viewpoint Hike",
+        "location": "De Posbank",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/De_Posbank_IMG_2340_2019-08-25_09.14.jpg/1280px-De_Posbank_IMG_2340_2019-08-25_09.14.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/PosbankSummerLandscape_-_Flickr_-_Ruben_Holthuijsen.jpg/1280px-PosbankSummerLandscape_-_Flickr_-_Ruben_Holthuijsen.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Veluwe_Zwerfpad_en_Maarten_van_Rossumpad_knppaal_04_bij_Posbank.jpg/1280px-Veluwe_Zwerfpad_en_Maarten_van_Rossumpad_knppaal_04_bij_Posbank.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Hike Rolling Heather Hills of De Posbank",
+            "desc": "Trek the dramatic glacial hills covered in blooming purple heather.",
+            "coords": [
+              52.025,
+              6.0222
+            ]
+          },
+          {
+            "time": "13:00",
+            "title": "De Posbank Pavilion Coffee & View",
+            "desc": "Panoramas across the IJssel river valley from 90 meters elevation.",
+            "coords": [
+              52.025,
+              6.0222
+            ]
+          },
+          {
+            "time": "16:00",
+            "title": "Veluwezoom Woodland Walk",
+            "desc": "Walk under 300-year-old beech avenues in Veluwezoom National Park.",
+            "coords": [
+              52.04,
+              6.01
+            ]
+          }
+        ]
+      },
+      "13": {
+        "num": "Day 13",
+        "title": "Kinderdijk 19 Historic Windmills Walk & Waterbus Cruise",
+        "location": "Kinderdijk",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Kinderdijk%2C_Nederwaard_molens_no_1tm5_RM30543tm7_IMG_9354_2021-06-13_11.04.jpg/1280px-Kinderdijk%2C_Nederwaard_molens_no_1tm5_RM30543tm7_IMG_9354_2021-06-13_11.04.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kinderdijk%2C_Overwaard_molens_no4_tm8_RM30554tm8_IMG_9357_2021-06-13_11.05.jpg/1280px-Kinderdijk%2C_Overwaard_molens_no4_tm8_RM30554tm8_IMG_9357_2021-06-13_11.05.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Kinderdijk%2C_Overwaard_molens_no8tm3_RM30558tm3_en_Nederwaard_molens_no5en4_RM30547%2B6_IMG_9372_2021-06-13_11.20.jpg/1280px-Kinderdijk%2C_Overwaard_molens_no8tm3_RM30558tm3_en_Nederwaard_molens_no5en4_RM30547%2B6_IMG_9372_2021-06-13_11.20.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Drive to UNESCO Kinderdijk Windmills",
+            "desc": "Caravan drive to 18th-century canal drainage windmill network.",
+            "coords": [
+              51.89,
+              4.6378
+            ]
+          },
+          {
+            "time": "11:30",
+            "title": "Museum Windmill Interior & Waterbus Cruise",
+            "desc": "Step inside working Museum Windmill Blokweer and cruise canal waterways.",
+            "coords": [
+              51.89,
+              4.6378
+            ]
+          },
+          {
+            "time": "16:00",
+            "title": "Dordrecht Oldest Dutch City Walk",
+            "desc": "Explore historic harbor basins and timber merchant houses in nearby Dordrecht.",
+            "coords": [
+              51.8133,
+              4.6681
+            ]
+          }
+        ]
+      },
+      "14": {
+        "num": "Day 14",
+        "title": "Zeeland Delta Works Storm Surge Barrier & Return Campervan",
+        "location": "Delta Works",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Delta_Works_-_Oosterscheldekering.JPG/1280px-Delta_Works_-_Oosterscheldekering.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Massive_stones_from_the_Oosterscheldekering%2C_the_largest_of_thirteen_Delta_Works%27_dams.jpg/1280px-Massive_stones_from_the_Oosterscheldekering%2C_the_largest_of_thirteen_Delta_Works%27_dams.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Oosterscheldekering%2C_the_largest_of_thirteen_Delta_Works%27_dams.jpg/1280px-Oosterscheldekering%2C_the_largest_of_thirteen_Delta_Works%27_dams.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Visit Neeltje Jans Delta Works Barrier",
+            "desc": "Marvel at the world's largest storm surge barrier protecting the lowlands.",
+            "coords": [
+              51.6267,
+              3.7022
+            ]
+          },
+          {
+            "time": "13:00",
+            "title": "Fresh Zeeland Mussels Lunch",
+            "desc": "Savor authentic steamed Zeeland mussels in Yerseke fishing harbor.",
+            "coords": [
+              51.4933,
+              4.0483
+            ]
+          },
+          {
+            "time": "16:00",
+            "title": "Return Campervan at Depot",
+            "desc": "Return campervan at Rotterdam / Amsterdam depot after an unforgettable 14-day trip.",
+            "coords": [
+              51.9244,
+              4.4777
+            ]
+          }
+        ]
+      }
+    }
+  },
           "sweden-caravan": {
     "title": "Kalmar, \u00d6land & Baltic Coast Campervan (Sweden)",
     "desc": "A 14-night caravan adventure for 2 adults through the sunny Baltic island of \u00d6land, Kalmar Castle, Sm\u00e5land pine forests, and granite coastal reserves in September 2026.",
@@ -6419,7 +7106,7 @@
             document.getElementById('trip-header-desc').innerText = tripData.desc;
             
             // 2. Update Transport Quick-Info & Budget Form Labels
-            const isCaravan = (currentTrip === 'sweden-caravan');
+            const isCaravan = (currentTrip === 'sweden-caravan' || currentTrip === 'netherlands-caravan');
             const transportText = isCaravan ? "Campervan / RV Rental Included" : "Rental Car Included";
             const transportIcon = isCaravan ? "fa-van-shuttle" : "fa-car-side";
             const carLabelText = isCaravan ? "Campervan / RV Rental, Fuel & Tolls (€)" : "Car Rental, Gas & Tolls (€)";
@@ -6634,7 +7321,7 @@
             const selHotel2 = hasBase2 ? ((tripData.hotels[1].list.find(h => h.selected) || tripData.hotels[1].list[0]) || { name: tripData.base2Name, price: tripData.defaults.hotel2 }) : null;
             const base2Nights = hasBase2 ? 5 : 0;
 
-            const isCaravan = (currentTrip === 'sweden-caravan');
+            const isCaravan = (currentTrip === 'sweden-caravan' || currentTrip === 'netherlands-caravan');
             const googleFlightsUrl = `https://www.google.com/travel/flights?q=flights+from+${flightOpt.origin}+to+${flightOpt.dest}+in+september+2026`;
             const rentalcarsUrl = `https://www.rentalcars.com/search-results?location=${flightOpt.dest}`;
             const bookingHotel1Url = `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(selHotel1.name + ' ' + tripData.title)}`;
