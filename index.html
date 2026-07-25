@@ -1250,6 +1250,10 @@
                         <option value="costa-brava">🎨 Costa Brava & Cadaqués (Catalonia)</option>
                     </optgroup>
                     <!-- Northern & Volcanic Islands Group -->
+                    <!-- Camping in the North Group -->
+                    <optgroup label="Camping in the North">
+                        <option value="sweden-caravan">🚐 Kalmar, Öland & Baltic Coast Campervan (Sweden)</option>
+                    </optgroup>
                     <optgroup label="Island Wonders">
                         <option value="faroe">🇫🇴 Faroe Islands (North Atlantic Wonder)</option>
                         <option value="lofoten">🇳🇴 Lofoten Islands (Arctic Norway)</option>
@@ -1471,6 +1475,697 @@
     <script>
         // Database of Trips (All 9 Trips, 11 Days Each, Fully Mapped!)
         const trips = {
+          "sweden-caravan": {
+    "title": "Kalmar, \u00d6land & Baltic Coast Campervan (Sweden)",
+    "desc": "A 14-night caravan adventure for 2 adults through the sunny Baltic island of \u00d6land, Kalmar Castle, Sm\u00e5land pine forests, and granite coastal reserves in September 2026.",
+    "base1Name": "\u00d6land Island Campsite",
+    "base2Name": "Kalmar Coastal Campsite",
+    "defaults": {
+      "flight": 260,
+      "car": 850,
+      "hotel1": 45,
+      "hotel2": 45,
+      "food": 90,
+      "activities": 220
+    },
+    "packingType": "cool",
+    "advisory": {
+      "weather": "\ud83c\udf42 Mild Baltic autumn (~16-19\u00b0C). \u00d6land is one of Sweden's sunniest regions. Crisp, clear evenings (~10\u00b0C) perfect for sea saunas.",
+      "vehicle": "\ud83d\ude90 Campervan / Motorhome (VW California or Fiat Camper). Smooth, spacious Swedish roads with easy caravan parking and E22 highway access.",
+      "terrain": "\ud83c\udf32 Coastal pine trails, limestone alvar plains (Stora Alvaret), sandy dunes, and granite archipelago boardwalks. Easy to moderate hiking."
+    },
+    "flights": [
+      {
+        "carrier": "SAS / KLM",
+        "origin": "AMS",
+        "dest": "CPH",
+        "price": 240,
+        "time": "Dep: 08:15, Ret: 19:40 (Fly CPH + Drive \u00d6resund Bridge to Kalmar)",
+        "tag": "AMS (Preferred)"
+      },
+      {
+        "carrier": "KLM / Lufthansa",
+        "origin": "RTM",
+        "dest": "ARN",
+        "price": 280,
+        "time": "Dep: 09:30, Ret: 18:20 (Fly Stockholm + Drive E4 South to Kalmar)",
+        "tag": "RTM Direct"
+      }
+    ],
+    "hotels": [
+      {
+        "category": "Base 1 (Nights 1 - 7 on \u00d6land Island)",
+        "list": [
+          {
+            "name": "Saxn\u00e4s Kronocamping \u00d6land",
+            "rating": "9.1 Superb",
+            "stars": 4,
+            "price": 45,
+            "coords": [
+              56.6685,
+              16.485
+            ],
+            "desc": "Seaside caravan resort right over the \u00d6land Bridge with private beach, pool, and floating sea sauna.",
+            "selected": true,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/00_3338_Oelandsbron.jpg/1280px-00_3338_Oelandsbron.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Oeland_bridge.jpg/1280px-Oeland_bridge.jpg"
+            ]
+          },
+          {
+            "name": "B\u00f6da Sand Beach Resort",
+            "rating": "9.3 Exceptional",
+            "stars": 5,
+            "price": 50,
+            "coords": [
+              57.275,
+              17.05
+            ],
+            "desc": "Sweden's iconic northern \u00d6land beach resort nestled between 20km of white sand dunes and pine forest.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Coasts_of_Oeland.jpg/1280px-Coasts_of_Oeland.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ekoteket_Trollskogen.jpg/1280px-Ekoteket_Trollskogen.jpg"
+            ]
+          },
+          {
+            "name": "Ekerum Resort & Camping",
+            "rating": "8.8 Very Good",
+            "stars": 4,
+            "price": 40,
+            "coords": [
+              56.7833,
+              16.55
+            ],
+            "desc": "Scenic coastal pitch next to Halltorps Hage nature reserve with panoramic views over the Kalmar Sound.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/3/31/Alvaret.JPG",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Borgholms_slott_2008.jpg/1280px-Borgholms_slott_2008.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Base 2 (Nights 8 - 14 in Kalmar & Sm\u00e5land Coast)",
+        "list": [
+          {
+            "name": "Stens\u00f6 Camping Kalmar",
+            "rating": "9.0 Superb",
+            "stars": 4,
+            "price": 42,
+            "coords": [
+              56.6481,
+              16.3411
+            ],
+            "desc": "Caravan park situated on Stens\u00f6 nature peninsula, walking distance to historic Kalmar Castle.",
+            "selected": true,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Kalmar_Slott_2009a.jpg/1280px-Kalmar_Slott_2009a.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kalmar_castle_aerial.jpg/1280px-Kalmar_castle_aerial.jpg"
+            ]
+          },
+          {
+            "name": "V\u00e4stervik Resort Archipelago Camping",
+            "rating": "9.2 Superb",
+            "stars": 5,
+            "price": 55,
+            "coords": [
+              57.7578,
+              16.6369
+            ],
+            "desc": "Five-star archipelago resort with granite waterfront pitches, outdoor heated pools, and kayak rentals.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/16_Juli_2013_V%C3%A4stervik.jpg/1280px-16_Juli_2013_V%C3%A4stervik.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Bokskog_Smaland.jpg/1280px-Bokskog_Smaland.jpg"
+            ]
+          },
+          {
+            "name": "Kosta Lodge & Camper Park",
+            "rating": "8.7 Very Good",
+            "stars": 4,
+            "price": 38,
+            "coords": [
+              56.85,
+              15.3958
+            ],
+            "desc": "Tucked in Sm\u00e5land's Kingdom of Crystal glassblowing valley with safari park access.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Bokskog_Smaland.jpg/1280px-Bokskog_Smaland.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Kalmar_Slott_2009a.jpg/1280px-Kalmar_Slott_2009a.jpg"
+            ]
+          }
+        ]
+      }
+    ],
+    "itinerary": {
+      "1": {
+        "num": "Day 1",
+        "title": "Kalmar Arrival & Castle Sunset Walk",
+        "location": "Kalmar Castle",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/00_1133_Kalmar_%28Schweden%29_-_Schloss_---_Kalmar_%28Sweden%29_-_Castle.jpg/1280px-00_1133_Kalmar_%28Schweden%29_-_Schloss_---_Kalmar_%28Sweden%29_-_Castle.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/00_2070_Kalmar_Castle%2C_Sweden.jpg/1280px-00_2070_Kalmar_Castle%2C_Sweden.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Kalmar_castle_%28by_Pudelek%29.JPG/1280px-Kalmar_castle_%28by_Pudelek%29.JPG"
+        ],
+        "timeline": [
+          {
+            "time": "14:00",
+            "title": "Pick up Campervan & Setup Base",
+            "desc": "Pick up caravan vehicle, check into Stens\u00f6 Peninsula campsite, and stock fridge with Swedish groceries.",
+            "coords": [
+              56.6481,
+              16.3411
+            ]
+          },
+          {
+            "time": "17:00",
+            "title": "Kalmar Renaissance Castle Tour",
+            "desc": "Explore 12th-century Moated Kalmar Castle overlooking the Baltic Sea.",
+            "coords": [
+              56.6634,
+              16.3567
+            ]
+          },
+          {
+            "time": "19:30",
+            "title": "Sunset Seafood Dinner at Harbor",
+            "desc": "Fresh smoked salmon and Baltic herring dinner at Kalmar harbor.",
+            "coords": [
+              56.6617,
+              16.3639
+            ]
+          }
+        ]
+      },
+      "2": {
+        "num": "Day 2",
+        "title": "Crossing the \u00d6land Bridge & F\u00e4rjestaden Harbor",
+        "location": "\u00d6land Bridge",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/00_1159_F%C3%A4rjestaden_%28Insel_%C3%96land%29_-_Hafen.jpg/1280px-00_1159_F%C3%A4rjestaden_%28Insel_%C3%96land%29_-_Hafen.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/00_2674_%C3%96land_bridge_-_Schweden.jpg/1280px-00_2674_%C3%96land_bridge_-_Schweden.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Kalmar%2C_pohled_na_%C3%96landsbron.jpg/1280px-Kalmar%2C_pohled_na_%C3%96landsbron.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Drive Over the 6km \u00d6land Bridge",
+            "desc": "Cross Sweden's famous \u00d6landsbron connecting the mainland to \u00d6land island.",
+            "coords": [
+              56.6711,
+              16.425
+            ]
+          },
+          {
+            "time": "12:30",
+            "title": "F\u00e4rjestaden Harbor Walk & Craft Bakery",
+            "desc": "Stroll the seaside harbor of F\u00e4rjestaden and sample cardamom buns.",
+            "coords": [
+              56.65,
+              16.4667
+            ]
+          },
+          {
+            "time": "15:30",
+            "title": "Caravan Setup at Saxn\u00e4s Kronocamping",
+            "desc": "Park caravan right by the sea with electric hookup and sea view.",
+            "coords": [
+              56.6685,
+              16.485
+            ]
+          }
+        ]
+      },
+      "3": {
+        "num": "Day 3",
+        "title": "Stora Alvaret UNESCO Limestone Alvar Hike",
+        "location": "Stora Alvaret",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/3/31/Alvaret.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Mysinge%2C_Stora_Alvaret_flora2.jpg/1280px-Mysinge%2C_Stora_Alvaret_flora2.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Mysinge%2C_Stora_Alvaret_flora7.jpg/1280px-Mysinge%2C_Stora_Alvaret_flora7.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Hike Stora Alvaret Plain",
+            "desc": "Walk the unique 26,000-hectare UNESCO limestone plateau with rare orchids and ancient stone cairns.",
+            "coords": [
+              56.4667,
+              16.55
+            ]
+          },
+          {
+            "time": "14:00",
+            "title": "G\u00e5rdby Traditional Windmill Tour",
+            "desc": "Visit \u00d6land's iconic wooden windmills and historic village center.",
+            "coords": [
+              56.6028,
+              16.6389
+            ]
+          },
+          {
+            "time": "17:00",
+            "title": "Coastal Bike Ride",
+            "desc": "Cycle along the flat eastern coastal path overlooking the Baltic Sea.",
+            "coords": [
+              56.55,
+              16.65
+            ]
+          }
+        ]
+      },
+      "4": {
+        "num": "Day 4",
+        "title": "Ottenby Bird Reserve & L\u00e5nge Jan Lighthouse",
+        "location": "L\u00e5nge Jan",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/L%C3%A5nge_Jan_2015_07.JPG/1280px-L%C3%A5nge_Jan_2015_07.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/L%C3%A5nge_Jan_2015_09.JPG/1280px-L%C3%A5nge_Jan_2015_09.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/L%C3%A5nge_Jan_lighthouse%2C_southern_%C3%96land%2C_Sweden.jpg/1280px-L%C3%A5nge_Jan_lighthouse%2C_southern_%C3%96land%2C_Sweden.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:00",
+            "title": "Drive to Southernmost Tip of \u00d6land",
+            "desc": "Scenic caravan drive down Route 136 to Ottenby Nature Reserve.",
+            "coords": [
+              56.21,
+              16.4
+            ]
+          },
+          {
+            "time": "11:00",
+            "title": "Climb L\u00e5nge Jan Lighthouse",
+            "desc": "Ascend Sweden's tallest lighthouse (42m) for 360\u00b0 views of seals and sea birds.",
+            "coords": [
+              56.1972,
+              16.3986
+            ]
+          },
+          {
+            "time": "15:00",
+            "title": "Eketorp Ringfort Ancient Settlement",
+            "desc": "Step back into Iron Age history inside the reconstructed circular stone ringfort.",
+            "coords": [
+              56.3117,
+              16.4853
+            ]
+          }
+        ]
+      },
+      "5": {
+        "num": "Day 5",
+        "title": "Borgholm Castle Ruins & Solliden Palace Gardens",
+        "location": "Borgholm",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Borgholm_castle_%28by_Pudelek%29.JPG/1280px-Borgholm_castle_%28by_Pudelek%29.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Borgholm_castle_%28by_Pudelek%29_2.JPG/1280px-Borgholm_castle_%28by_Pudelek%29_2.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Borgholm_castle_%28by_Pudelek%29_3.JPG/1280px-Borgholm_castle_%28by_Pudelek%29_3.JPG"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Explore Borgholm Castle Ruins",
+            "desc": "Walk the imposing shell of 'Scandinavia's most powerful ruin' overlooking the sea.",
+            "coords": [
+              56.8711,
+              16.6492
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Solliden Royal Palace Gardens",
+            "desc": "Stroll the lush Italian & English gardens of the Swedish Royal Family's summer residence.",
+            "coords": [
+              56.8667,
+              16.6417
+            ]
+          },
+          {
+            "time": "16:30",
+            "title": "Borgholm Harbor Ice Cream & Stroll",
+            "desc": "Relax at Borgholm Marina with fresh Swedish ice cream.",
+            "coords": [
+              56.88,
+              16.65
+            ]
+          }
+        ]
+      },
+      "6": {
+        "num": "Day 6",
+        "title": "Trollskogen Enchanted Pine Forest Trail",
+        "location": "Trollskogen",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ek_Trollskogen_%C3%96land.jpg/1280px-Ek_Trollskogen_%C3%96land.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Naturum%2C_Trollskogen%2C_%C3%96land.jpg/1280px-Naturum%2C_Trollskogen%2C_%C3%96land.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Trolleken%2C_Trollskogen%2C_Borgholm_municipality%2C_%C3%96land_01.jpg/1280px-Trolleken%2C_Trollskogen%2C_Borgholm_municipality%2C_%C3%96land_01.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Hike the Twisted Pine Forest Trail",
+            "desc": "Explore 4.5km loop through windswept, centuries-old ivy-draped pines and shipwreck beach.",
+            "coords": [
+              57.3456,
+              17.1189
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Swedavallen Oak Forest Picnic",
+            "desc": "Picnic under ancient giant Swedish oaks in the nature reserve.",
+            "coords": [
+              57.32,
+              17.08
+            ]
+          },
+          {
+            "time": "16:00",
+            "title": "B\u00f6da Bay White Sand Beach Swim",
+            "desc": "Dip in the clear waters of B\u00f6da Sand, Sweden's famous white sand bay.",
+            "coords": [
+              57.275,
+              17.05
+            ]
+          }
+        ]
+      },
+      "7": {
+        "num": "Day 7",
+        "title": "L\u00e5nge Erik Lighthouse & Northern \u00d6land Beaches",
+        "location": "L\u00e5nge Erik",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Cows_walking_water_shore_at_L%C3%A5nge_Erik.jpg/1280px-Cows_walking_water_shore_at_L%C3%A5nge_Erik.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/L%C3%A5nge_Erik_11.jpg/1280px-L%C3%A5nge_Erik_11.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/L%C3%A5nge_Erik_20190718_01.jpg/1280px-L%C3%A5nge_Erik_20190718_01.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "L\u00e5nge Erik Lighthouse Island Hike",
+            "desc": "Cross the causeway to Grankullavik and climb L\u00e5nge Erik lighthouse.",
+            "coords": [
+              57.3672,
+              17.0972
+            ]
+          },
+          {
+            "time": "13:00",
+            "title": "Byxelkrok Harbor Smokehouse Lunch",
+            "desc": "Enjoy smoked mackerel and shrimp at Byxelkrok fishing village harbor.",
+            "coords": [
+              57.3275,
+              17.0083
+            ]
+          },
+          {
+            "time": "16:00",
+            "title": "Byrum Raukar Sea Stacks Sunset",
+            "desc": "Photograph \u00d6land's only limestone rauk sea stacks at Byrum coast.",
+            "coords": [
+              57.2217,
+              16.9639
+            ]
+          }
+        ]
+      },
+      "8": {
+        "num": "Day 8",
+        "title": "Sea Kayaking in the \u00d6land Sound",
+        "location": "\u00d6land Coast",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Byxelkrok_huts.jpg/1280px-Byxelkrok_huts.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Byxelkrok_st%C3%A4llplats%2C_Byxelkrok.jpg/1280px-Byxelkrok_st%C3%A4llplats%2C_Byxelkrok.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Byxelkrok_%C3%96land_-_panoramio.jpg/1280px-Byxelkrok_%C3%96land_-_panoramio.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Guided Sea Kayak Expedition",
+            "desc": "Paddle calm turquoise Baltic waters around \u00d6land's sheltered western islets.",
+            "coords": [
+              57.3275,
+              17.0083
+            ]
+          },
+          {
+            "time": "13:00",
+            "title": "Fika Coffee & Kanelbulle Break",
+            "desc": "Enjoy traditional Swedish fika coffee break on a granite skerry island.",
+            "coords": [
+              57.3,
+              16.98
+            ]
+          },
+          {
+            "time": "16:00",
+            "title": "Caravan Campfire & Sauna Night",
+            "desc": "Relax in the seaside wood-fired sauna at Kronocamping.",
+            "coords": [
+              56.6685,
+              16.485
+            ]
+          }
+        ]
+      },
+      "9": {
+        "num": "Day 9",
+        "title": "Return to Mainland & Stens\u00f6 Peninsula Walk",
+        "location": "Stens\u00f6 Peninsula",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/8/84/Gustav_Vasa_Stone-Stensoe.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/G%C3%A4ddsarkom_fr%C3%A5n_Stens%C3%B6.jpg/1280px-G%C3%A4ddsarkom_fr%C3%A5n_Stens%C3%B6.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/b/bc/G%C3%A4ddsarkom_fr%C3%A5n_Stens%C3%B6_2.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Drive Back Over Bridge to Kalmar",
+            "desc": "Return to mainland Kalmar and set up caravan base at Stens\u00f6 Campsite.",
+            "coords": [
+              56.6481,
+              16.3411
+            ]
+          },
+          {
+            "time": "13:00",
+            "title": "Stens\u00f6 Peninsula Forest Trail Hike",
+            "desc": "Hike the 5km coastal forest loop where King Gustav Vasa landed in 1520.",
+            "coords": [
+              56.645,
+              16.335
+            ]
+          },
+          {
+            "time": "16:30",
+            "title": "Kalmar Art Museum Visit",
+            "desc": "Explore modern Scandinavian design at Kalmar Konstmuseum in the park.",
+            "coords": [
+              56.66,
+              16.355
+            ]
+          }
+        ]
+      },
+      "10": {
+        "num": "Day 10",
+        "title": "Sm\u00e5land Kingdom of Crystal & Glassblowing Studio",
+        "location": "Kosta",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Ulrica_Hydman_Caramba%21_vase.jpg/1280px-Ulrica_Hydman_Caramba%21_vase.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Drive into Deep Sm\u00e5land Pine Forests",
+            "desc": "Caravan road trip inland to Glasriket (The Kingdom of Crystal).",
+            "coords": [
+              56.85,
+              15.3958
+            ]
+          },
+          {
+            "time": "11:00",
+            "title": "Live Glassblowing Demonstration at Kosta",
+            "desc": "Watch master glass artisans craft molten glass in furnaces dating back to 1742.",
+            "coords": [
+              56.85,
+              15.3958
+            ]
+          },
+          {
+            "time": "15:00",
+            "title": "Try Glassblowing & Outlet Gallery",
+            "desc": "Attempt blowing your own glass vessel under master guidance.",
+            "coords": [
+              56.851,
+              15.397
+            ]
+          }
+        ]
+      },
+      "11": {
+        "num": "Day 11",
+        "title": "Gr\u00f6n\u00e5sen Elk & Reindeer Park Safari",
+        "location": "Gr\u00f6n\u00e5sen",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Kalmar_Slott_2009a.jpg/1280px-Kalmar_Slott_2009a.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/00_3338_Oelandsbron.jpg/1280px-00_3338_Oelandsbron.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Walk Gr\u00f6n\u00e5sen Elk Forest Trail",
+            "desc": "Observe majestic Swedish elks (moose) up close in their natural pine habitat.",
+            "coords": [
+              56.84,
+              15.42
+            ]
+          },
+          {
+            "time": "13:00",
+            "title": "Forest Lodge Lunch",
+            "desc": "Savory Swedish game specialties and lingonberry juice at the lodge.",
+            "coords": [
+              56.84,
+              15.42
+            ]
+          },
+          {
+            "time": "16:00",
+            "title": "Scenic Forest Lake Drive",
+            "desc": "Drive past tranquil Sm\u00e5land red wooden cottages and blue forest lakes.",
+            "coords": [
+              56.8,
+              15.5
+            ]
+          }
+        ]
+      },
+      "12": {
+        "num": "Day 12",
+        "title": "V\u00e4stervik Archipelago Coastal Path Hike",
+        "location": "V\u00e4stervik",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Holms_Yachtvarv_Gamleby_2022-05-21.jpg/1280px-Holms_Yachtvarv_Gamleby_2022-05-21.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Psykmuseet_59_flygfoto.jpg/1280px-Psykmuseet_59_flygfoto.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Storkl%C3%A4ppens_fyr.jpg/1280px-Storkl%C3%A4ppens_fyr.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Drive North to V\u00e4stervik Archipelago",
+            "desc": "Coastal drive to V\u00e4stervik resort peninsula surrounded by 5,000 islands.",
+            "coords": [
+              57.7578,
+              16.6369
+            ]
+          },
+          {
+            "time": "12:00",
+            "title": "Gr\u00e4ns\u00f6 Nature Reserve Cliff Trail",
+            "desc": "Hike the 12km coastal trail across pink granite cliffs and heather meadows.",
+            "coords": [
+              57.75,
+              16.68
+            ]
+          },
+          {
+            "time": "16:30",
+            "title": "Granite Rock Sunset Bathing",
+            "desc": "Swim in the Baltic sea off sun-warmed granite rocks.",
+            "coords": [
+              57.755,
+              16.685
+            ]
+          }
+        ]
+      },
+      "13": {
+        "num": "Day 13",
+        "title": "Misterhult Nature Reserve Boat Excursion",
+        "location": "Misterhult Reserve",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Friction_stir_welding.jpg/1280px-Friction_stir_welding.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/SKB_KBS-3.jpg/1280px-SKB_KBS-3.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Test_tunnel%2C_%C3%84sp%C3%B6_laboratory%2C_Oskarshamn.jpg/1280px-Test_tunnel%2C_%C3%84sp%C3%B6_laboratory%2C_Oskarshamn.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "10:00",
+            "title": "Archipelago Boat Cruise",
+            "desc": "Cruise through uninhabited granite islands and eagle nesting grounds in Misterhult.",
+            "coords": [
+              57.5167,
+              16.6667
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Island Picnic at \u00c4ng\u00f6",
+            "desc": "Disembark on \u00c4ng\u00f6 island for fresh seafood picnic on the rocks.",
+            "coords": [
+              57.52,
+              16.68
+            ]
+          },
+          {
+            "time": "17:00",
+            "title": "Return Drive to Kalmar Campsite",
+            "desc": "Enjoy final evening around caravan outdoor fire pit.",
+            "coords": [
+              56.6481,
+              16.3411
+            ]
+          }
+        ]
+      },
+      "14": {
+        "num": "Day 14",
+        "title": "Kalmar Old Town Cobblestone Exploration & Departure",
+        "location": "Kalmar Gamla Stan",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Kalmar_cathedral_Kalmar_Sweden_001.JPG/1280px-Kalmar_cathedral_Kalmar_Sweden_001.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Kalmar_cathedral_Kalmar_Sweden_002.JPG/1280px-Kalmar_cathedral_Kalmar_Sweden_002.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Kalmar_domkyrka%2C_juli_2015a.jpg/1280px-Kalmar_domkyrka%2C_juli_2015a.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Stroll Kalmar Old Town (Gamla Stan)",
+            "desc": "Wander cobblestone lanes lined with 17th-century wooden houses and Kalmar Cathedral.",
+            "coords": [
+              56.6617,
+              16.3639
+            ]
+          },
+          {
+            "time": "12:00",
+            "title": "Final Swedish Souvenir & Fika Stop",
+            "desc": "Pick up Swedish lingonberry preserves, glasscraft, and final coffee.",
+            "coords": [
+              56.662,
+              16.364
+            ]
+          },
+          {
+            "time": "14:00",
+            "title": "Return Campervan & Departure",
+            "desc": "Return campervan and depart for home flight with incredible memories.",
+            "coords": [
+              56.6634,
+              16.3567
+            ]
+          }
+        ]
+      }
+    }
+  },
           "riviera": {
                     "title": "French & Italian Riviera (Discovery Route)",
                     "desc": "A custom 10-night road trip for 2 people in September 2026, optimized with outer-city hotel bases (Antibes & Sanremo) and a rental car.",
