@@ -1251,6 +1251,11 @@
                     </optgroup>
                     <!-- Northern & Volcanic Islands Group -->
                     <!-- Camping in the North Group -->
+                    <!-- Exotic Lands Group -->
+                    <optgroup label="Exotic Lands">
+                        <option value="thailand-adventure">🇹🇭 Thailand Adventure (Phuket, Krabi & Phi Phi)</option>
+                        <option value="bali-indonesia">🇮🇩 Bali & Komodo Islands (Tropical Indonesia)</option>
+                    </optgroup>
                     <optgroup label="Camping in the North">
                         <option value="netherlands-caravan">🌷 Grand Netherlands Campervan Tour (Texel & Veluwe)</option>
                         <option value="sweden-caravan">🚐 Kalmar, Öland & Baltic Coast Campervan (Sweden)</option>
@@ -1476,6 +1481,1367 @@
     <script>
         // Database of Trips (All 9 Trips, 11 Days Each, Fully Mapped!)
         const trips = {
+          "thailand-adventure": {
+    "title": "Thailand Adventure (Phuket, Krabi & Phi Phi Islands)",
+    "desc": "A 14-night luxury island-hopping and jungle road trip for 2 adults through Phuket coastal cliffs, Phang Nga Bay limestone karsts, Krabi jungle waterfalls, and Phi Phi Islands in September 2026.",
+    "base1Name": "Phuket / Phang Nga Luxury Resort",
+    "base2Name": "Krabi / Railay Beach Villas",
+    "defaults": {
+      "flight": 780,
+      "car": 420,
+      "hotel1": 160,
+      "hotel2": 175,
+      "food": 70,
+      "activities": 240
+    },
+    "packingType": "warm",
+    "advisory": {
+      "weather": "\ud83c\udf34 Tropical warm weather (~28-31\u00b0C). September is lush green season with warm ocean water (~28\u00b0C) and short afternoon tropical showers.",
+      "vehicle": "\ud83d\ude97 Rental SUV (Toyota Fortuner or Honda CR-V). Automatic transmission with right-hand drive. Excellent coastal highways.",
+      "terrain": "\ud83e\udd7e Jungle rainforest trails, limestone karst stairs, sea kayak routes, and sandy beaches. Sturdy water shoes recommended."
+    },
+    "flights": [
+      {
+        "carrier": "Qatar Airways / Emirates",
+        "origin": "AMS",
+        "dest": "HKT",
+        "price": 780,
+        "time": "Dep: 15:30, Ret: 21:10 (Phuket International Airport)",
+        "tag": "AMS (Preferred)"
+      }
+    ],
+    "hotels": [
+      {
+        "category": "Base 1 (Nights 1 - 7 in Phuket & Phang Nga Bay)",
+        "list": [
+          {
+            "name": "Keemala Bird's Nest Pool Villas Phuket",
+            "rating": "9.5 Exceptional",
+            "stars": 5,
+            "price": 190,
+            "coords": [
+              7.935,
+              98.29
+            ],
+            "desc": "Luxury treehouse pool villa nestled in rainforest hills overlooking the Andaman Sea.",
+            "selected": true,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Canoes_in_Phang_Nga_Bay.jpg/1280px-Canoes_in_Phang_Nga_Bay.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Phi_Phi_Le_Islands_Maya_Bay.jpg/1280px-Phi_Phi_Le_Islands_Maya_Bay.jpg"
+            ]
+          },
+          {
+            "name": "The Slate Phuket Resort",
+            "rating": "9.2 Superb",
+            "stars": 5,
+            "price": 160,
+            "coords": [
+              8.0855,
+              98.298
+            ],
+            "desc": "Industrial chic design resort adjacent to Nai Yang Beach and Sirinat National Park.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Canoes_in_Phang_Nga_Bay.jpg/1280px-Canoes_in_Phang_Nga_Bay.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Railay_Beach_Krabi.jpg/1280px-Railay_Beach_Krabi.jpg"
+            ]
+          },
+          {
+            "name": "Santhiya Koh Yao Yai Resort & Spa",
+            "rating": "9.3 Exceptional",
+            "stars": 5,
+            "price": 145,
+            "coords": [
+              7.97,
+              98.6
+            ],
+            "desc": "Eco-luxury teakwood resort on a quiet island in Phang Nga Bay with private infinity pool.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Canoes_in_Phang_Nga_Bay.jpg/1280px-Canoes_in_Phang_Nga_Bay.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Phi_Phi_Le_Islands_Maya_Bay.jpg/1280px-Phi_Phi_Le_Islands_Maya_Bay.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Base 2 (Nights 8 - 14 in Krabi & Railay Coast)",
+        "list": [
+          {
+            "name": "Rayavadee Resort Railay Beach",
+            "rating": "9.7 Exceptional",
+            "stars": 5,
+            "price": 210,
+            "coords": [
+              8.01,
+              98.839
+            ],
+            "desc": "World-renowned luxury resort tucked between limestone cliffs and marine park beaches.",
+            "selected": true,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Railay_Beach_Krabi.jpg/1280px-Railay_Beach_Krabi.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Krabi_Tiger_Cave_Temple.jpg/1280px-Krabi_Tiger_Cave_Temple.jpg"
+            ]
+          },
+          {
+            "name": "Tubkaak Krabi Boutique Resort",
+            "rating": "9.3 Exceptional",
+            "stars": 5,
+            "price": 175,
+            "coords": [
+              8.055,
+              98.755
+            ],
+            "desc": "Serene beachfront sanctuary facing the Hong Islands archipelago with private dip pool villas.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Railay_Beach_Krabi.jpg/1280px-Railay_Beach_Krabi.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Canoes_in_Phang_Nga_Bay.jpg/1280px-Canoes_in_Phang_Nga_Bay.jpg"
+            ]
+          },
+          {
+            "name": "Nakamanda Resort & Spa Krabi",
+            "rating": "9.0 Superb",
+            "stars": 4,
+            "price": 150,
+            "coords": [
+              8.04,
+              98.76
+            ],
+            "desc": "Secluded villa resort with private sea views over Klong Muang beach.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Railay_Beach_Krabi.jpg/1280px-Railay_Beach_Krabi.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Krabi_Tiger_Cave_Temple.jpg/1280px-Krabi_Tiger_Cave_Temple.jpg"
+            ]
+          }
+        ]
+      }
+    ],
+    "itinerary": {
+      "1": {
+        "num": "Day 1",
+        "title": "Arrive in Phuket & Sunset at Promthep Cape",
+        "location": "Promthep Cape",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg/1280px-Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/6/6d/Phuket_Promthep_Cape.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Promthep_Cape_Phuket.jpg/1280px-Promthep_Cape_Phuket.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Arrive in Phuket & Sunset at Promthep Cape",
+            "desc": "Explore the breathtaking scenery of Promthep Cape.",
+            "coords": [
+              7.76,
+              98.305
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              7.76,
+              98.305
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              7.76,
+              98.305
+            ]
+          }
+        ]
+      },
+      "2": {
+        "num": "Day 2",
+        "title": "Sirinat National Park & Nai Yang Beach Walk",
+        "location": "Nai Yang Beach",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nai_Yang_Beach%2C_Phuket_%284448621322%29.jpg/1280px-Nai_Yang_Beach%2C_Phuket_%284448621322%29.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Nai_Yang_Beach.jpg/1280px-Nai_Yang_Beach.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Sirinat_National_Park02.jpg/1280px-Sirinat_National_Park02.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Sirinat National Park & Nai Yang Beach Walk",
+            "desc": "Explore the breathtaking scenery of Nai Yang Beach.",
+            "coords": [
+              8.0855,
+              98.298
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              8.0855,
+              98.298
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              8.0855,
+              98.298
+            ]
+          }
+        ]
+      },
+      "3": {
+        "num": "Day 3",
+        "title": "Sea Kayaking Phang Nga Bay Limestone Caves & James Bond Island",
+        "location": "Phang Nga Bay",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Crab_sand_balls%2C_Koh_Yao_Noi%2C_Phang_Nga_Bay%2C_Thailand.jpg/1280px-Crab_sand_balls%2C_Koh_Yao_Noi%2C_Phang_Nga_Bay%2C_Thailand.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Koh_Yao_Noi%2C_Limestone_formations_in_Phang_Nga_Bay%2C_Thailand.jpg/1280px-Koh_Yao_Noi%2C_Limestone_formations_in_Phang_Nga_Bay%2C_Thailand.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Koh_Yao_Noi%2C_Palm_on_the_beach%2C_Phang_Nga_Bay%2C_Thailand.jpg/1280px-Koh_Yao_Noi%2C_Palm_on_the_beach%2C_Phang_Nga_Bay%2C_Thailand.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Sea Kayaking Phang Nga Bay Limestone Caves & James Bond Island",
+            "desc": "Explore the breathtaking scenery of Phang Nga Bay.",
+            "coords": [
+              8.275,
+              98.5
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              8.275,
+              98.5
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              8.275,
+              98.5
+            ]
+          }
+        ]
+      },
+      "4": {
+        "num": "Day 4",
+        "title": "Koh Yao Yai Island Longtail Boat Expedition",
+        "location": "Koh Yao Yai",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Canoes_in_Phang_Nga_Bay.jpg/1280px-Canoes_in_Phang_Nga_Bay.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Koh Yao Yai Island Longtail Boat Expedition",
+            "desc": "Explore the breathtaking scenery of Koh Yao Yai.",
+            "coords": [
+              7.97,
+              98.6
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              7.97,
+              98.6
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              7.97,
+              98.6
+            ]
+          }
+        ]
+      },
+      "5": {
+        "num": "Day 5",
+        "title": "Phuket Old Town Sino-Portuguese Heritage Walk & Night Market",
+        "location": "Phuket Old Town",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Buildings_in_Old_Phuket_Town.jpg/1280px-Buildings_in_Old_Phuket_Town.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Entrance_of_a_house_in_Old_Phuket_Town.jpg/1280px-Entrance_of_a_house_in_Old_Phuket_Town.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Phuket_Town_Thailand-Murals-in-Phang-Nga-Road-04.jpg/1280px-Phuket_Town_Thailand-Murals-in-Phang-Nga-Road-04.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Phuket Old Town Sino-Portuguese Heritage Walk & Night Market",
+            "desc": "Explore the breathtaking scenery of Phuket Old Town.",
+            "coords": [
+              7.884,
+              98.389
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              7.884,
+              98.389
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              7.884,
+              98.389
+            ]
+          }
+        ]
+      },
+      "6": {
+        "num": "Day 6",
+        "title": "Ethical Elephant Jungle Sanctuary Experience",
+        "location": "Phuket Hills",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/P5020101_%2852898556514%29.jpg/1280px-P5020101_%2852898556514%29.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Toes_of_an_Asian_elephant.jpg/1280px-Toes_of_an_Asian_elephant.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Ethical Elephant Jungle Sanctuary Experience",
+            "desc": "Explore the breathtaking scenery of Phuket Hills.",
+            "coords": [
+              7.95,
+              98.35
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              7.95,
+              98.35
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              7.95,
+              98.35
+            ]
+          }
+        ]
+      },
+      "7": {
+        "num": "Day 7",
+        "title": "Ferry to Phi Phi Don & Viewpoint Hike",
+        "location": "Phi Phi Islands",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Mushroom_of_the_sea.jpg/1280px-Mushroom_of_the_sea.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Phi_Phi_Viewpoint_2_Panoramic.jpg/1280px-Phi_Phi_Viewpoint_2_Panoramic.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Phi_Phi_island_panorama.jpg/1280px-Phi_Phi_island_panorama.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Ferry to Phi Phi Don & Viewpoint Hike",
+            "desc": "Explore the breathtaking scenery of Phi Phi Islands.",
+            "coords": [
+              7.74,
+              98.77
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              7.74,
+              98.77
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              7.74,
+              98.77
+            ]
+          }
+        ]
+      },
+      "8": {
+        "num": "Day 8",
+        "title": "Private Longtail Charter to Maya Bay & Pileh Lagoon",
+        "location": "Maya Bay",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Playa_Maya%2C_Ko_Phi_Phi%2C_Tailandia%2C_2013-08-19%2C_DD_01.JPG/1280px-Playa_Maya%2C_Ko_Phi_Phi%2C_Tailandia%2C_2013-08-19%2C_DD_01.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Playa_Maya%2C_Ko_Phi_Phi%2C_Tailandia%2C_2013-08-19%2C_DD_03.JPG/1280px-Playa_Maya%2C_Ko_Phi_Phi%2C_Tailandia%2C_2013-08-19%2C_DD_03.JPG",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Playa_Maya%2C_Ko_Phi_Phi%2C_Tailandia%2C_2013-08-19%2C_DD_05.JPG/1280px-Playa_Maya%2C_Ko_Phi_Phi%2C_Tailandia%2C_2013-08-19%2C_DD_05.JPG"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Private Longtail Charter to Maya Bay & Pileh Lagoon",
+            "desc": "Explore the breathtaking scenery of Maya Bay.",
+            "coords": [
+              7.678,
+              98.766
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              7.678,
+              98.766
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              7.678,
+              98.766
+            ]
+          }
+        ]
+      },
+      "9": {
+        "num": "Day 9",
+        "title": "Crossing to Krabi & Tubkaak Beach Sunset",
+        "location": "Tubkaak Beach",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Canoes_in_Phang_Nga_Bay.jpg/1280px-Canoes_in_Phang_Nga_Bay.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Crossing to Krabi & Tubkaak Beach Sunset",
+            "desc": "Explore the breathtaking scenery of Tubkaak Beach.",
+            "coords": [
+              8.055,
+              98.755
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              8.055,
+              98.755
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              8.055,
+              98.755
+            ]
+          }
+        ]
+      },
+      "10": {
+        "num": "Day 10",
+        "title": "Railay Beach Rock Climbing Cliffs & Phra Nang Cave",
+        "location": "Railay Beach",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Rai_Leh_Bay.jpg/1280px-Rai_Leh_Bay.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Rai_Leh_Beach1.jpg/1280px-Rai_Leh_Beach1.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Railay%2C_Krabi%2C_Palms%2C_Thailand.jpg/1280px-Railay%2C_Krabi%2C_Palms%2C_Thailand.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Railay Beach Rock Climbing Cliffs & Phra Nang Cave",
+            "desc": "Explore the breathtaking scenery of Railay Beach.",
+            "coords": [
+              8.01,
+              98.839
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              8.01,
+              98.839
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              8.01,
+              98.839
+            ]
+          }
+        ]
+      },
+      "11": {
+        "num": "Day 11",
+        "title": "Dragon Crest (Khao Ngon Nak) Mountain Summit Hike",
+        "location": "Dragon Crest",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Canoes_in_Phang_Nga_Bay.jpg/1280px-Canoes_in_Phang_Nga_Bay.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Dragon Crest (Khao Ngon Nak) Mountain Summit Hike",
+            "desc": "Explore the breathtaking scenery of Dragon Crest.",
+            "coords": [
+              8.09,
+              98.78
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              8.09,
+              98.78
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              8.09,
+              98.78
+            ]
+          }
+        ]
+      },
+      "12": {
+        "num": "Day 12",
+        "title": "Emerald Pool & Hot Springs Waterfall Jungle Trek",
+        "location": "Emerald Pool",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/b/b8/Emerald_Pool_at_Khao_Phra_Bang_Khram_Nature_Reserve%2C_near_Krabi_%28Thailand%29_-_panoramio.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Emerald_pool_park%2C_Krabi_provice%2C_Thailand_2018_3.jpg/1280px-Emerald_pool_park%2C_Krabi_provice%2C_Thailand_2018_3.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Emerald_pool_park%2C_Krabi_provicne%2C_Thailand_2018_4.jpg/1280px-Emerald_pool_park%2C_Krabi_provicne%2C_Thailand_2018_4.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Emerald Pool & Hot Springs Waterfall Jungle Trek",
+            "desc": "Explore the breathtaking scenery of Emerald Pool.",
+            "coords": [
+              7.925,
+              99.26
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              7.925,
+              99.26
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              7.925,
+              99.26
+            ]
+          }
+        ]
+      },
+      "13": {
+        "num": "Day 13",
+        "title": "Hong Islands Archipelago Speedboat & Snorkeling",
+        "location": "Hong Islands",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Koh_Lao_Lading_isalnd.jpg/1280px-Koh_Lao_Lading_isalnd.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Koh_Lao_Lading_isalnd_02.jpg/1280px-Koh_Lao_Lading_isalnd_02.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Selfie_%2824890374595%29.jpg/1280px-Selfie_%2824890374595%29.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Hong Islands Archipelago Speedboat & Snorkeling",
+            "desc": "Explore the breathtaking scenery of Hong Islands.",
+            "coords": [
+              8.08,
+              98.68
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              8.08,
+              98.68
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              8.08,
+              98.68
+            ]
+          }
+        ]
+      },
+      "14": {
+        "num": "Day 14",
+        "title": "Tiger Cave Temple 1,260-Step Mountain Climb & Departure",
+        "location": "Tiger Cave Temple",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Krabi%2C_Buddha_of_Tiger_Cave_Temple%2C_Thailand.jpg/1280px-Krabi%2C_Buddha_of_Tiger_Cave_Temple%2C_Thailand.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Krabi%2C_Stupa_of_Tiger_Cave_Temple%2C_Thailand.jpg/1280px-Krabi%2C_Stupa_of_Tiger_Cave_Temple%2C_Thailand.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Krabi%2C_Tiger_Cave_Temple%2C_Thailand.jpg/1280px-Krabi%2C_Tiger_Cave_Temple%2C_Thailand.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Tiger Cave Temple 1,260-Step Mountain Climb & Departure",
+            "desc": "Explore the breathtaking scenery of Tiger Cave Temple.",
+            "coords": [
+              8.127,
+              98.923
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Island & Jungle Adventure",
+            "desc": "Guided coastal excursion and local gourmet Thai dining.",
+            "coords": [
+              8.127,
+              98.923
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Sunset View & Seaside Relaxation",
+            "desc": "Enjoy tropical sunset over the Andaman Sea.",
+            "coords": [
+              8.127,
+              98.923
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "bali-indonesia": {
+    "title": "Bali & Komodo Islands (Tropical Indonesia)",
+    "desc": "A 14-night tropical expedition for 2 adults through Ubud rainforest ravine pools, Sidemen rice terraces, Munduk waterfalls, Uluwatu sea cliffs, and Komodo dragon island cruises in September 2026.",
+    "base1Name": "Ubud Rainforest Jungle Resort",
+    "base2Name": "Uluwatu / Labuan Bajo Ocean Villas",
+    "defaults": {
+      "flight": 850,
+      "car": 450,
+      "hotel1": 170,
+      "hotel2": 190,
+      "food": 65,
+      "activities": 260
+    },
+    "packingType": "warm",
+    "advisory": {
+      "weather": "\u2600\ufe0f Peak dry season in Bali (~27-30\u00b0C). Sunny, warm days with light ocean breezes. Crisp, cool mountain air in Munduk (~19\u00b0C).",
+      "vehicle": "\ud83d\ude97 Private SUV with driver or self-drive 4WD. Navigating winding mountain passes and coastal cliff roads.",
+      "terrain": "\ud83e\udd7e Volcanic ash trails, steep rainforest ravine stairs, and coastal limestone cliffs. Good hiking boots required for volcano trek."
+    },
+    "flights": [
+      {
+        "carrier": "Singapore Airlines / KLM",
+        "origin": "AMS",
+        "dest": "DPS",
+        "price": 850,
+        "time": "Dep: 11:15, Ret: 20:30 (Denpasar Bali International)",
+        "tag": "AMS (Preferred)"
+      }
+    ],
+    "hotels": [
+      {
+        "category": "Base 1 (Nights 1 - 7 in Ubud Rainforest & Highlands)",
+        "list": [
+          {
+            "name": "Viceroy Bali Jungle Luxury Resort",
+            "rating": "9.7 Exceptional",
+            "stars": 5,
+            "price": 220,
+            "coords": [
+              -8.49,
+              115.275
+            ],
+            "desc": "Multi-award-winning luxury resort overlooking the Valley of the Kings in Ubud.",
+            "selected": true,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rice_Terrace_Tegallalang_Bali.jpg/1280px-Rice_Terrace_Tegallalang_Bali.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Batur_Volcano_Bali.jpg/1280px-Batur_Volcano_Bali.jpg"
+            ]
+          },
+          {
+            "name": "Pramana Watu Kurung Resort Ubud",
+            "rating": "9.3 Exceptional",
+            "stars": 4,
+            "price": 170,
+            "coords": [
+              -8.46,
+              115.24
+            ],
+            "desc": "Serene Balinese sanctuary surrounded by Ayung river rice paddies and tropical jungle.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rice_Terrace_Tegallalang_Bali.jpg/1280px-Rice_Terrace_Tegallalang_Bali.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cliff_Uluwatu_Temple_Bali.jpg/1280px-Cliff_Uluwatu_Temple_Bali.jpg"
+            ]
+          },
+          {
+            "name": "Samanvaya Luxury Resort Sidemen",
+            "rating": "9.4 Exceptional",
+            "stars": 4,
+            "price": 150,
+            "coords": [
+              -8.47,
+              115.44
+            ],
+            "desc": "Eco-resort nestled in the untouched green hills of Mount Agung valley.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rice_Terrace_Tegallalang_Bali.jpg/1280px-Rice_Terrace_Tegallalang_Bali.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Batur_Volcano_Bali.jpg/1280px-Batur_Volcano_Bali.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Base 2 (Nights 8 - 14 in Uluwatu & Komodo Islands)",
+        "list": [
+          {
+            "name": "Alila Villas Uluwatu",
+            "rating": "9.8 Exceptional",
+            "stars": 5,
+            "price": 240,
+            "coords": [
+              -8.845,
+              115.135
+            ],
+            "desc": "Iconic cliff-edge resort with infinity pool suspended 100 meters over the Indian Ocean.",
+            "selected": true,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cliff_Uluwatu_Temple_Bali.jpg/1280px-Cliff_Uluwatu_Temple_Bali.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Padar_Island_Komodo.jpg/1280px-Padar_Island_Komodo.jpg"
+            ]
+          },
+          {
+            "name": "AYANA Komodo Waecicu Beach",
+            "rating": "9.4 Exceptional",
+            "stars": 5,
+            "price": 190,
+            "coords": [
+              -8.46,
+              119.86
+            ],
+            "desc": "Five-star oceanfront gateway to Komodo National Park with private pier and sunset lounge.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Komodo_Dragon_National_Park.jpg/1280px-Komodo_Dragon_National_Park.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Padar_Island_Komodo.jpg/1280px-Padar_Island_Komodo.jpg"
+            ]
+          },
+          {
+            "name": "Suarga Padang Padang Villa",
+            "rating": "9.1 Superb",
+            "stars": 4,
+            "price": 160,
+            "coords": [
+              -8.81,
+              115.11
+            ],
+            "desc": "Sustainable luxury cliffside resort overlooking Padang Padang famous surf break.",
+            "selected": false,
+            "imgs": [
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cliff_Uluwatu_Temple_Bali.jpg/1280px-Cliff_Uluwatu_Temple_Bali.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Kelingking_Beach_Nusa_Penida.jpg/1280px-Kelingking_Beach_Nusa_Penida.jpg"
+            ]
+          }
+        ]
+      }
+    ],
+    "itinerary": {
+      "1": {
+        "num": "Day 1",
+        "title": "Arrive in Bali & Ubud Jungle Welcome",
+        "location": "Ubud",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Viceroy_-_panoramio.jpg/1280px-Viceroy_-_panoramio.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Viceroy_-_panoramio_%281%29.jpg/1280px-Viceroy_-_panoramio_%281%29.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Viceroy_Bali_-_panoramio.jpg/1280px-Viceroy_Bali_-_panoramio.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Arrive in Bali & Ubud Jungle Welcome",
+            "desc": "Discover the natural wonder of Ubud.",
+            "coords": [
+              -8.5069,
+              115.2625
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.5069,
+              115.2625
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.5069,
+              115.2625
+            ]
+          }
+        ]
+      },
+      "2": {
+        "num": "Day 2",
+        "title": "Tegallalang Rice Terraces & Sacred Monkey Forest Sanctuary",
+        "location": "Tegallalang",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rice_terraces%2C_Bali.jpg/1280px-Rice_terraces%2C_Bali.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Tegalalang_Rice_Terraces.jpg/1280px-Tegalalang_Rice_Terraces.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Tegallalang_Rice_Terraces.jpg/1280px-Tegallalang_Rice_Terraces.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Tegallalang Rice Terraces & Sacred Monkey Forest Sanctuary",
+            "desc": "Discover the natural wonder of Tegallalang.",
+            "coords": [
+              -8.43,
+              115.28
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.43,
+              115.28
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.43,
+              115.28
+            ]
+          }
+        ]
+      },
+      "3": {
+        "num": "Day 3",
+        "title": "Ayung River White Water Rafting & Tirta Empul Water Temple",
+        "location": "Ayung River",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Bali_-_Pura_Tirta_Empul_%282025%29_-_img_07.jpg/1280px-Bali_-_Pura_Tirta_Empul_%282025%29_-_img_07.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Bali_-_Pura_Tirta_Empul_%282025%29_-_img_23.jpg/1280px-Bali_-_Pura_Tirta_Empul_%282025%29_-_img_23.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Bali_-_Pura_Tirta_Empul_%282025%29_-_img_35.jpg/1280px-Bali_-_Pura_Tirta_Empul_%282025%29_-_img_35.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Ayung River White Water Rafting & Tirta Empul Water Temple",
+            "desc": "Discover the natural wonder of Ayung River.",
+            "coords": [
+              -8.415,
+              115.315
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.415,
+              115.315
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.415,
+              115.315
+            ]
+          }
+        ]
+      },
+      "4": {
+        "num": "Day 4",
+        "title": "Mount Batur Sunrise Volcano Hike & Thermal Hot Springs",
+        "location": "Mount Batur",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bangly-Regency_Bali_Indonesia_Lake-Batur-01.jpg/1280px-Bangly-Regency_Bali_Indonesia_Lake-Batur-01.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mount_Agung_and_Mount_Batur%2C_Bali%2C_Indonesia%2C_3d_view_-_October_23rd%2C_2020_-_50537571137.jpg/1280px-Mount_Agung_and_Mount_Batur%2C_Bali%2C_Indonesia%2C_3d_view_-_October_23rd%2C_2020_-_50537571137.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Mount_Batur_Bali.jpg/1280px-Mount_Batur_Bali.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Mount Batur Sunrise Volcano Hike & Thermal Hot Springs",
+            "desc": "Discover the natural wonder of Mount Batur.",
+            "coords": [
+              -8.24,
+              115.375
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.24,
+              115.375
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.24,
+              115.375
+            ]
+          }
+        ]
+      },
+      "5": {
+        "num": "Day 5",
+        "title": "Munduk Waterfall Trek & Twin Lakes Viewpoint",
+        "location": "Munduk",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Golden_Valley_Waterfall_SF0001.jpg/1280px-Golden_Valley_Waterfall_SF0001.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Munduk_Tutub_Waterfall_SF0001.jpg/1280px-Munduk_Tutub_Waterfall_SF0001.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Munduk_Tutub_Waterfall_SF0002.jpg/1280px-Munduk_Tutub_Waterfall_SF0002.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Munduk Waterfall Trek & Twin Lakes Viewpoint",
+            "desc": "Discover the natural wonder of Munduk.",
+            "coords": [
+              -8.27,
+              115.08
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.27,
+              115.08
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.27,
+              115.08
+            ]
+          }
+        ]
+      },
+      "6": {
+        "num": "Day 6",
+        "title": "Sidemen Valley Traditional Village Walk & Mount Agung Sunset",
+        "location": "Sidemen Valley",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rice_Terrace_Tegallalang_Bali.jpg/1280px-Rice_Terrace_Tegallalang_Bali.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Sidemen Valley Traditional Village Walk & Mount Agung Sunset",
+            "desc": "Discover the natural wonder of Sidemen Valley.",
+            "coords": [
+              -8.47,
+              115.44
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.47,
+              115.44
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.47,
+              115.44
+            ]
+          }
+        ]
+      },
+      "7": {
+        "num": "Day 7",
+        "title": "Speedboat to Nusa Penida & Kelingking T-Rex Cliff",
+        "location": "Kelingking Beach",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Kelingking_Beach_%28T-Rex_Bay%29_of_Nusa_Penida%2C_Bali_%282025%29_-_img_02.jpg/1280px-Kelingking_Beach_%28T-Rex_Bay%29_of_Nusa_Penida%2C_Bali_%282025%29_-_img_02.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Kelingking_Beach_%28T-Rex_Bay%29_of_Nusa_Penida%2C_Bali_%282025%29_-_img_04.jpg/1280px-Kelingking_Beach_%28T-Rex_Bay%29_of_Nusa_Penida%2C_Bali_%282025%29_-_img_04.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Kelingking_Beach_%28T-Rex_Bay%29_of_Nusa_Penida%2C_Bali_%282025%29_-_img_06.jpg/1280px-Kelingking_Beach_%28T-Rex_Bay%29_of_Nusa_Penida%2C_Bali_%282025%29_-_img_06.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Speedboat to Nusa Penida & Kelingking T-Rex Cliff",
+            "desc": "Discover the natural wonder of Kelingking Beach.",
+            "coords": [
+              -8.75,
+              115.47
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.75,
+              115.47
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.75,
+              115.47
+            ]
+          }
+        ]
+      },
+      "8": {
+        "num": "Day 8",
+        "title": "Angel's Billabong, Broken Beach & Manta Ray Snorkeling",
+        "location": "Broken Beach",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/BrokenBeach.jpg/1280px-BrokenBeach.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Broken_Bay%2C_Nusa_Penida.jpg/1280px-Broken_Bay%2C_Nusa_Penida.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Broken_Bay.jpg/1280px-Broken_Bay.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Angel's Billabong, Broken Beach & Manta Ray Snorkeling",
+            "desc": "Discover the natural wonder of Broken Beach.",
+            "coords": [
+              -8.73,
+              115.45
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.73,
+              115.45
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.73,
+              115.45
+            ]
+          }
+        ]
+      },
+      "9": {
+        "num": "Day 9",
+        "title": "Flight to Labuan Bajo & Komodo National Park Harbor Arrival",
+        "location": "Labuan Bajo",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rice_Terrace_Tegallalang_Bali.jpg/1280px-Rice_Terrace_Tegallalang_Bali.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Flight to Labuan Bajo & Komodo National Park Harbor Arrival",
+            "desc": "Discover the natural wonder of Labuan Bajo.",
+            "coords": [
+              -8.49,
+              119.88
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.49,
+              119.88
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.49,
+              119.88
+            ]
+          }
+        ]
+      },
+      "10": {
+        "num": "Day 10",
+        "title": "Komodo Dragon Safari on Rinca & Komodo Island",
+        "location": "Komodo National Park",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Komodo_dragon%2C_Varanus_komodoensis%2C_Komodo_Island%2C_Indonesia%2C_20250822_1319_2752.jpg/1280px-Komodo_dragon%2C_Varanus_komodoensis%2C_Komodo_Island%2C_Indonesia%2C_20250822_1319_2752.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Komodo_dragon_%28Varanus_komodoensis%29.jpg/1280px-Komodo_dragon_%28Varanus_komodoensis%29.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Komodo_dragon_%28Varanus_komodoensis%29_2.jpg/1280px-Komodo_dragon_%28Varanus_komodoensis%29_2.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Komodo Dragon Safari on Rinca & Komodo Island",
+            "desc": "Discover the natural wonder of Komodo National Park.",
+            "coords": [
+              -8.6,
+              119.5
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.6,
+              119.5
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.6,
+              119.5
+            ]
+          }
+        ]
+      },
+      "11": {
+        "num": "Day 11",
+        "title": "Padar Island 3-Color Beach Summit Viewpoint Hike",
+        "location": "Padar Island",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_0906_2625.jpg/1280px-Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_0906_2625.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_0908_2631.jpg/1280px-Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_0908_2631.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_0908_2633.jpg/1280px-Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_0908_2633.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Padar Island 3-Color Beach Summit Viewpoint Hike",
+            "desc": "Discover the natural wonder of Padar Island.",
+            "coords": [
+              -8.65,
+              119.57
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.65,
+              119.57
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.65,
+              119.57
+            ]
+          }
+        ]
+      },
+      "12": {
+        "num": "Day 12",
+        "title": "Pink Beach Snorkeling & Taka Makassar Sandbar",
+        "location": "Pink Beach",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Pink_Beach%2C_Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_1108_2678.jpg/1280px-Pink_Beach%2C_Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_1108_2678.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Pink_Beach%2C_Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_1108_2680.jpg/1280px-Pink_Beach%2C_Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_1108_2680.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Pink_Beach%2C_Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_1108_2683.jpg/1280px-Pink_Beach%2C_Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_1108_2683.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Pink Beach Snorkeling & Taka Makassar Sandbar",
+            "desc": "Discover the natural wonder of Pink Beach.",
+            "coords": [
+              -8.6,
+              119.52
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.6,
+              119.52
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.6,
+              119.52
+            ]
+          }
+        ]
+      },
+      "13": {
+        "num": "Day 13",
+        "title": "Return to Bali & Uluwatu Cliffside Kecak Fire Dance",
+        "location": "Uluwatu Temple",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cliffs_of_Uluwatu%2C_Bali%2C_Indonesia%2C_20220826_1006_1038.jpg/1280px-Cliffs_of_Uluwatu%2C_Bali%2C_Indonesia%2C_20220826_1006_1038.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Kuta_Bali_Indonesia_Pura-Luhur-Uluwatu-02.jpg/1280px-Kuta_Bali_Indonesia_Pura-Luhur-Uluwatu-02.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Kuta_Bali_Indonesia_Pura-Luhur-Uluwatu-03.jpg/1280px-Kuta_Bali_Indonesia_Pura-Luhur-Uluwatu-03.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Return to Bali & Uluwatu Cliffside Kecak Fire Dance",
+            "desc": "Discover the natural wonder of Uluwatu Temple.",
+            "coords": [
+              -8.829,
+              115.084
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.829,
+              115.084
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.829,
+              115.084
+            ]
+          }
+        ]
+      },
+      "14": {
+        "num": "Day 14",
+        "title": "Jimbaran Seafood Barbecue Beach Sunset & Departure",
+        "location": "Jimbaran Beach",
+        "imgs": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Jimbaran_Beach%2C_Bali-%E5%85%A8%E7%90%83%E5%8D%81%E5%A4%A7%E7%9C%8B%E6%97%A5%E8%90%BD%E6%9C%80%E4%BD%B3%E5%9C%B0_-_panoramio.jpg/1280px-Jimbaran_Beach%2C_Bali-%E5%85%A8%E7%90%83%E5%8D%81%E5%A4%A7%E7%9C%8B%E6%97%A5%E8%90%BD%E6%9C%80%E4%BD%B3%E5%9C%B0_-_panoramio.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Jimbaran_beach_at_sunset.jpg/1280px-Jimbaran_beach_at_sunset.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Jimbaran_restaurant.jpg/1280px-Jimbaran_restaurant.jpg"
+        ],
+        "timeline": [
+          {
+            "time": "09:30",
+            "title": "Morning: Jimbaran Seafood Barbecue Beach Sunset & Departure",
+            "desc": "Discover the natural wonder of Jimbaran Beach.",
+            "coords": [
+              -8.77,
+              115.16
+            ]
+          },
+          {
+            "time": "13:30",
+            "title": "Afternoon Cultural & Nature Trek",
+            "desc": "Immerse in Balinese heritage, tropical wildlife, and pristine beaches.",
+            "coords": [
+              -8.77,
+              115.16
+            ]
+          },
+          {
+            "time": "17:30",
+            "title": "Ocean View & Seafood Dinner",
+            "desc": "Relax with panoramic views of the Indian Ocean.",
+            "coords": [
+              -8.77,
+              115.16
+            ]
+          }
+        ]
+      }
+    }
+  },
           "netherlands-caravan": {
     "title": "Grand Netherlands Campervan Tour (Texel & Veluwe)",
     "desc": "A 14-night campervan journey for 2 adults through Texel Island sand dunes, Waddenzee UNESCO coast, Giethoorn canals, Veluwe national park, and Kinderdijk windmills in September 2026.",
