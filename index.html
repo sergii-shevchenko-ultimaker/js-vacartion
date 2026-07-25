@@ -1271,9 +1271,9 @@
                     <p>2 Adults</p>
                 </div>
                 <div class="info-card">
-                    <i class="fa-solid fa-car-side"></i>
+                    <i class="fa-solid fa-car-side" id="quick-transport-icon"></i>
                     <h3>Transport</h3>
-                    <p>Rental Car Included</p>
+                    <p id="quick-transport-text">Rental Car Included</p>
                 </div>
                 <div class="info-card">
                     <i class="fa-solid fa-wallet"></i>
@@ -1374,7 +1374,7 @@
                         <input type="number" id="calc-flight" class="form-control" value="199" oninput="calculateBudget()">
                     </div>
                     <div class="form-group">
-                        <label for="calc-car">Car Rental, Gas & Tolls (€)</label>
+                        <label for="calc-car" id="calc-car-label">Car Rental, Gas & Tolls (€)</label>
                         <input type="number" id="calc-car" class="form-control" value="600" oninput="calculateBudget()">
                     </div>
                     <div class="form-group">
@@ -1418,7 +1418,7 @@
                             <span id="bd-flights">€199</span>
                         </div>
                         <div class="breakdown-row">
-                            <span>Car Rental & Gas:</span>
+                            <span id="bd-car-row-label">Car Rental & Gas:</span>
                             <span id="bd-car">€600</span>
                         </div>
                         <div class="breakdown-row" id="bd-base1-row">
@@ -6418,7 +6418,25 @@
             document.getElementById('trip-header-title').innerText = tripData.title;
             document.getElementById('trip-header-desc').innerText = tripData.desc;
             
-            // 2. Update Budget Form Labels
+            // 2. Update Transport Quick-Info & Budget Form Labels
+            const isCaravan = (currentTrip === 'sweden-caravan');
+            const transportText = isCaravan ? "Campervan / RV Rental Included" : "Rental Car Included";
+            const transportIcon = isCaravan ? "fa-van-shuttle" : "fa-car-side";
+            const carLabelText = isCaravan ? "Campervan / RV Rental, Fuel & Tolls (€)" : "Car Rental, Gas & Tolls (€)";
+            const bdCarLabelText = isCaravan ? "Campervan / RV Rental & Fuel:" : "Car Rental & Gas:";
+
+            const quickTextEl = document.getElementById('quick-transport-text');
+            if (quickTextEl) quickTextEl.innerText = transportText;
+            
+            const quickIconEl = document.getElementById('quick-transport-icon');
+            if (quickIconEl) quickIconEl.className = "fa-solid " + transportIcon;
+            
+            const calcCarLabelEl = document.getElementById('calc-car-label');
+            if (calcCarLabelEl) calcCarLabelEl.innerText = carLabelText;
+            
+            const bdCarRowLabelEl = document.getElementById('bd-car-row-label');
+            if (bdCarRowLabelEl) bdCarRowLabelEl.innerText = bdCarLabelText;
+
             document.getElementById('calc-nice-label').innerText = tripData.base1Name + " / Night (€)";
             document.getElementById('calc-italy-label').innerText = tripData.base2Name + " / Night (€)";
 
@@ -6616,34 +6634,45 @@
             const selHotel2 = hasBase2 ? ((tripData.hotels[1].list.find(h => h.selected) || tripData.hotels[1].list[0]) || { name: tripData.base2Name, price: tripData.defaults.hotel2 }) : null;
             const base2Nights = hasBase2 ? 5 : 0;
 
+            const isCaravan = (currentTrip === 'sweden-caravan');
             const googleFlightsUrl = `https://www.google.com/travel/flights?q=flights+from+${flightOpt.origin}+to+${flightOpt.dest}+in+september+2026`;
             const rentalcarsUrl = `https://www.rentalcars.com/search-results?location=${flightOpt.dest}`;
             const bookingHotel1Url = `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(selHotel1.name + ' ' + tripData.title)}`;
             const bookingHotel2Url = selHotel2 ? `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(selHotel2.name + ' ' + tripData.title)}` : '';
+
+            const carItem = isCaravan ? {
+                id: 'car',
+                icon: 'fa-van-shuttle',
+                title: `Campervan / RV Rental (${flightOpt.dest} / Kalmar)`,
+                subtitle: `Dates: Sep 2 – Sep 16, 2026 (Fully-equipped 2-Berth Campervan/RV, Unlimited Mileage)`,
+                estPrice: tripData.defaults.car,
+                bookUrl: 'https://indiecampers.com/',
+                providerName: "IndieCampers / McRent"
+            } : {
+                id: 'car',
+                icon: 'fa-car',
+                title: `Rental Car & Insurance (${flightOpt.dest} Airport)`,
+                subtitle: `Dates: Sep 2 – Sep 12, 2026 (Compact / SUV, Unlimited Mileage)`,
+                estPrice: tripData.defaults.car,
+                bookUrl: rentalcarsUrl,
+                providerName: "Rentalcars.com"
+            };
 
             const items = [
                 {
                     id: 'flight',
                     icon: 'fa-plane',
                     title: `Flight Tickets (${flightOpt.origin} → ${flightOpt.dest})`,
-                    subtitle: `Dates: Sep 2 – Sep 12, 2026 (2 Passengers, ${flightOpt.carrier})`,
+                    subtitle: `Dates: Sep 2 – ${isCaravan ? 'Sep 16' : 'Sep 12'}, 2026 (2 Passengers, ${flightOpt.carrier})`,
                     estPrice: flightOpt.price || tripData.defaults.flight,
                     bookUrl: googleFlightsUrl,
                     providerName: "Google Flights"
                 },
-                {
-                    id: 'car',
-                    icon: 'fa-car',
-                    title: `Rental Car & Insurance (${flightOpt.dest} Airport)`,
-                    subtitle: `Dates: Sep 2 – Sep 12, 2026 (Compact / SUV, Unlimited Mileage)`,
-                    estPrice: tripData.defaults.car,
-                    bookUrl: rentalcarsUrl,
-                    providerName: "Rentalcars.com"
-                },
+                carItem,
                 {
                     id: 'hotel1',
                     icon: 'fa-hotel',
-                    title: `Base 1 Hotel: ${selHotel1.name}`,
+                    title: `Base 1 Campsite: ${selHotel1.name}`,
                     subtitle: `Check-in: Sep 2 | Check-out: Sep ${2 + base1Nights} (${base1Nights} Nights, 2 Guests)`,
                     estPrice: selHotel1.price * base1Nights,
                     bookUrl: bookingHotel1Url,
