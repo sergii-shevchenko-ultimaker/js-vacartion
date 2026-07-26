@@ -493,18 +493,42 @@
             padding: 1.2rem;
             display: flex;
             gap: 1.2rem;
+            align-items: center;
+        }
+
+        .act-img-box {
+            width: 140px;
+            height: 95px;
+            border-radius: 10px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            border: 1px solid var(--glass-border);
+        }
+
+        .act-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            color: transparent;
+            font-size: 0;
+        }
+
+        .act-card:hover .act-img-box img {
+            transform: scale(1.08);
         }
 
         .act-icon {
-            width: 46px;
-            height: 46px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: rgba(20, 184, 166, 0.15);
             color: var(--primary-light);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1rem;
             flex-shrink: 0;
         }
 
@@ -1127,7 +1151,7 @@
                 title: 'Crete (Chania & West Coast), Greece',
                 subtitle: 'Pink Sand Lagoons, Easy Gorge Walks & Venetian Alleys',
                 badge: 'Top Pick • Best Value',
-                img: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80',
+                img: './images/crete_balos.jpg',
                 defaults: { flight: 520, car7: 175, car10: 250, car12: 300, hotelNight: 55, foodDay: 40, act: 80 },
                 center: [35.5138, 24.0180],
                 hotels: [
@@ -1144,78 +1168,78 @@
                 days: [
                     { day: 1, tag: 'Arrival & Old Town', title: 'Arrival in Chania & Venetian Harbor Sunset', coords: [35.5138, 24.0180],
                       activities: [
-                        { time: '14:00', icon: 'fa-car', name: 'Car Pickup & Check-in', desc: 'Pick up rental car at CHQ airport, drive 25 mins to sea-view studio.', meta: '🚗 20 km drive' },
-                        { time: '17:30', icon: 'fa-shoe-prints', name: 'Venetian Harbor Stroll', desc: 'Walk historic lighthouse pier and narrow cobble alleys.', meta: '🥾 2 km easy stroll' },
-                        { time: '19:30', icon: 'fa-utensils', name: 'Seaside Taverna Dinner', desc: 'Fresh grilled octopus, dakos salad, and house wine by the sea.', meta: '🍽️ ~€30 for 2' }
+                        { time: '14:00', icon: 'fa-car', name: 'Car Pickup & Check-in', desc: 'Pick up rental car at CHQ airport, drive 25 mins to sea-view studio.', meta: '🚗 20 km drive', img: './images/car_drive.jpg' },
+                        { time: '17:30', icon: 'fa-shoe-prints', name: 'Venetian Harbor Stroll', desc: 'Walk historic lighthouse pier and narrow cobble alleys.', meta: '🥾 2 km easy stroll', img: './images/crete_chania.jpg' },
+                        { time: '19:30', icon: 'fa-utensils', name: 'Seaside Taverna Dinner', desc: 'Fresh grilled octopus, dakos salad, and house wine by the sea.', meta: '🍽️ ~€30 for 2', img: './images/greek_taverna.jpg' }
                       ]
                     },
                     { day: 2, tag: 'Sea Chill', title: 'Falassarna Beach Chilling & Ancient Ruins', coords: [35.4914, 23.5806],
                       activities: [
-                        { time: '09:30', icon: 'fa-umbrella-beach', name: 'Falassarna Beach Relaxing', desc: 'Golden sand, crystal clear turquoise sea. Relax & swim.', meta: '🏖️ Full Sea Relax' },
-                        { time: '16:00', icon: 'fa-monument', name: 'Ancient Falassarna Walk', desc: 'Short walk to ancient Hellenistic harbor carved in stone.', meta: '🥾 1.5 km walk' },
-                        { time: '19:00', icon: 'fa-martini-glass-citrus', name: 'Sunset Beach Bar Drinks', desc: 'Watch famous Mediterranean sun dip into the horizon.', meta: '🌅 Sunset view' }
+                        { time: '09:30', icon: 'fa-umbrella-beach', name: 'Falassarna Beach Relaxing', desc: 'Golden sand, crystal clear turquoise sea. Relax & swim.', meta: '🏖️ Full Sea Relax', img: './images/falassarna_beach.jpg' },
+                        { time: '16:00', icon: 'fa-monument', name: 'Ancient Falassarna Walk', desc: 'Short walk to ancient Hellenistic harbor carved in stone.', meta: '🥾 1.5 km walk', img: './images/ancient_ruins.jpg' },
+                        { time: '19:00', icon: 'fa-martini-glass-citrus', name: 'Sunset Beach Bar Drinks', desc: 'Watch famous Mediterranean sun dip into the horizon.', meta: '🌅 Sunset view', img: './images/sunset_cocktail.jpg' }
                       ]
                     },
                     { day: 3, tag: 'Minor Hike & Sea', title: 'Imbros Gorge Walk & Sfakia Cove Swim', coords: [35.2530, 24.1680],
                       activities: [
-                        { time: '08:30', icon: 'fa-person-hiking', name: 'Imbros Gorge Descent', desc: 'Easy gentle 8 km walk through narrow dramatic limestone walls.', meta: '🥾 2.5 hrs • Easy downhill' },
-                        { time: '12:30', icon: 'fa-water', name: 'Chora Sfakion Sea Dip', desc: 'Refreshing dip in Libyan Sea & seaside fish lunch.', meta: '🏊 Deep sea swim' },
-                        { time: '15:00', icon: 'fa-taxi', name: 'Taxi Back to Car', desc: 'Shared taxi back to gorge entrance (€10 total).', meta: '🚗 15 min drive' }
+                        { time: '08:30', icon: 'fa-person-hiking', name: 'Imbros Gorge Descent', desc: 'Easy gentle 8 km walk through narrow dramatic limestone walls.', meta: '🥾 2.5 hrs • Easy downhill', img: './images/crete_imbros.jpg' },
+                        { time: '12:30', icon: 'fa-water', name: 'Chora Sfakion Sea Dip', desc: 'Refreshing dip in Libyan Sea & seaside fish lunch.', meta: '🏊 Deep sea swim', img: './images/sea_swim.jpg' },
+                        { time: '15:00', icon: 'fa-taxi', name: 'Taxi Back to Car', desc: 'Shared taxi back to gorge entrance (€10 total).', meta: '🚗 15 min drive', img: './images/car_drive.jpg' }
                       ]
                     },
                     { day: 4, tag: 'Discovery & Boat', title: 'Balos Lagoon & Gramvousa Island Explorer', coords: [35.5833, 23.5933],
                       activities: [
-                        { time: '10:00', icon: 'fa-ship', name: 'Kissamos Boat Cruise', desc: 'Scenic boat ride across Kissamos gulf to uninhabited islands.', meta: '⛵ €25/person boat' },
-                        { time: '11:30', icon: 'fa-crown', name: 'Gramvousa Fortress Climb', desc: 'Short 20-min trail up to Venetian castle with panoramic views.', meta: '🥾 20 mins hike' },
-                        { time: '13:30', icon: 'fa-swimming-pool', name: 'Balos Lagoon Chilling', desc: 'Wade in shallow warm pink sand lagoon waters.', meta: '🏖️ Pure Paradise' }
+                        { time: '10:00', icon: 'fa-ship', name: 'Kissamos Boat Cruise', desc: 'Scenic boat ride across Kissamos gulf to uninhabited islands.', meta: '⛵ €25/person boat', img: './images/boat_cruise.jpg' },
+                        { time: '11:30', icon: 'fa-crown', name: 'Gramvousa Fortress Climb', desc: 'Short 20-min trail up to Venetian castle with panoramic views.', meta: '🥾 20 mins hike', img: './images/castle_fortress.jpg' },
+                        { time: '13:30', icon: 'fa-swimming-pool', name: 'Balos Lagoon Chilling', desc: 'Wade in shallow warm pink sand lagoon waters.', meta: '🏖️ Pure Paradise', img: './images/crete_balos.jpg' }
                       ]
                     },
                     { day: 5, tag: 'Coastal Trail', title: 'Katholiko Monastery & Seitan Limania Cove', coords: [35.5850, 24.1450],
                       activities: [
-                        { time: '09:00', icon: 'fa-archway', name: 'Katholiko Monastery Trail', desc: 'Hike ancient stone steps down to abandoned cliffside monastery.', meta: '🥾 4 km roundtrip • Moderate' },
-                        { time: '13:00', icon: 'fa-volleyball', name: 'Seitan Limania Beach Dip', desc: 'Zigzag down to famous narrow fjord cove.', meta: '🏖️ Cliffside fjord' }
+                        { time: '09:00', icon: 'fa-archway', name: 'Katholiko Monastery Trail', desc: 'Hike ancient stone steps down to abandoned cliffside monastery.', meta: '🥾 4 km roundtrip • Moderate', img: './images/monastery_trail.jpg' },
+                        { time: '13:00', icon: 'fa-volleyball', name: 'Seitan Limania Beach Dip', desc: 'Zigzag down to famous narrow fjord cove.', meta: '🏖️ Cliffside fjord', img: './images/fjord_cove.jpg' }
                       ]
                     },
                     { day: 6, tag: 'Lagoon & Dune Walk', title: 'Elafonisi Pink Beach & Cedar Dunes Walk', coords: [35.2713, 23.5413],
                       activities: [
-                        { time: '09:30', icon: 'fa-water', name: 'Elafonisi Warm Shallows', desc: 'Explore famous pink coral sand banks.', meta: '🏖️ Chill & Swim' },
-                        { time: '14:00', icon: 'fa-tree', name: 'Kedrodasos Juniper Dunes Walk', desc: 'Gentle coastal path through ancient cedar trees along wild beach.', meta: '🥾 3 km scenic walk' }
+                        { time: '09:30', icon: 'fa-water', name: 'Elafonisi Warm Shallows', desc: 'Explore famous pink coral sand banks.', meta: '🏖️ Chill & Swim', img: './images/crete_elafonisi.jpg' },
+                        { time: '14:00', icon: 'fa-tree', name: 'Kedrodasos Juniper Dunes Walk', desc: 'Gentle coastal path through ancient cedar trees along wild beach.', meta: '🥾 3 km scenic walk', img: './images/cedar_dunes.jpg' }
                       ]
                     },
                     { day: 7, tag: 'Urban Exploration', title: 'Chania Old Town & Venizelos Sunset View', coords: [35.5180, 24.0500],
                       activities: [
-                        { time: '10:00', icon: 'fa-store', name: 'Agora Market & Craft Shops', desc: 'Explore spice markets, leather lane, and local olive oil shops.', meta: '🏛️ Urban Exploration' },
-                        { time: '18:30', icon: 'fa-mountain-sun', name: 'Venizelos Panorama View', desc: 'Sunset overlooking whole Chania bay from hillside cafe.', meta: '🌅 Panoramic Sunset' }
+                        { time: '10:00', icon: 'fa-store', name: 'Agora Market & Craft Shops', desc: 'Explore spice markets, leather lane, and local olive oil shops.', meta: '🏛️ Urban Exploration', img: './images/spice_market.jpg' },
+                        { time: '18:30', icon: 'fa-mountain-sun', name: 'Venizelos Panorama View', desc: 'Sunset overlooking whole Chania bay from hillside cafe.', meta: '🌅 Panoramic Sunset', img: './images/panoramic_view.jpg' }
                       ]
                     },
                     { day: 8, tag: 'Gorge & Ruins', title: 'Agia Irini Gorge Walk or Aptera Ruins', coords: [35.3330, 23.8330],
                       activities: [
-                        { time: '09:00', icon: 'fa-person-hiking', name: 'Agia Irini Shaded Trail', desc: 'Peaceful forested gorge trail with wildflowers & wooden bridges.', meta: '🥾 6 km easy walk' },
-                        { time: '14:00', icon: 'fa-anchor', name: 'Kalyves Beach Chill', desc: 'Quiet seaside taverna & afternoon swim.', meta: '🏖️ Relax & Dine' }
+                        { time: '09:00', icon: 'fa-person-hiking', name: 'Agia Irini Shaded Trail', desc: 'Peaceful forested gorge trail with wildflowers & wooden bridges.', meta: '🥾 6 km easy walk', img: './images/forest_trail.jpg' },
+                        { time: '14:00', icon: 'fa-anchor', name: 'Kalyves Beach Chill', desc: 'Quiet seaside taverna & afternoon swim.', meta: '🏖️ Relax & Dine', img: './images/falassarna_beach.jpg' }
                       ]
                     },
                     { day: 9, tag: 'Sea & Kayak', title: 'Marathi Bay & Loutraki Cove Chill', coords: [35.5000, 24.1667],
                       activities: [
-                        { time: '10:00', icon: 'fa-umbrella-beach', name: 'Sheltered Bay Swimming', desc: 'Calm glassy sea ideal for swimming and SUP paddleboard.', meta: '🏖️ Zero Waves Chill' },
-                        { time: '13:00', icon: 'fa-fish', name: 'Seafood Lunch at Patrelantonis', desc: 'Traditional seaside taverna right on the water.', meta: '🍽️ Local Cuisine' }
+                        { time: '10:00', icon: 'fa-umbrella-beach', name: 'Sheltered Bay Swimming', desc: 'Calm glassy sea ideal for swimming and SUP paddleboard.', meta: '🏖️ Zero Waves Chill', img: './images/sea_swim.jpg' },
+                        { time: '13:00', icon: 'fa-fish', name: 'Seafood Lunch at Patrelantonis', desc: 'Traditional seaside taverna right on the water.', meta: '🍽️ Local Cuisine', img: './images/seafood_lunch.jpg' }
                       ]
                     },
                     { day: 10, tag: 'Gorge Walk', title: 'Botanical Gardens & Shaded Mountain Walk', coords: [35.4180, 23.9500],
                       activities: [
-                        { time: '10:00', icon: 'fa-leaf', name: 'Crete Botanical Park Walk', desc: 'Scenic trail through tropical fruit trees and citrus groves.', meta: '🥾 2 km gentle walk' },
-                        { time: '14:00', icon: 'fa-utensils', name: 'Hillside Organic Lunch', desc: 'Farm-to-table lunch overlooking orange valley.', meta: '🍽️ Organic dining' }
+                        { time: '10:00', icon: 'fa-leaf', name: 'Crete Botanical Park Walk', desc: 'Scenic trail through tropical fruit trees and citrus groves.', meta: '🥾 2 km gentle walk', img: './images/botanical_garden.jpg' },
+                        { time: '14:00', icon: 'fa-utensils', name: 'Hillside Organic Lunch', desc: 'Farm-to-table lunch overlooking orange valley.', meta: '🍽️ Organic dining', img: './images/local_food.jpg' }
                       ]
                     },
                     { day: 11, tag: 'Freshwater Lake & Sea', title: 'Lake Kournas Mountain Walk & Georgioupoli Swim', coords: [35.3330, 24.2830],
                       activities: [
-                        { time: '10:00', icon: 'fa-water', name: 'Lake Kournas Turtle Swim', desc: 'Rent a pedal boat or swim in Crete’s only freshwater mountain lake.', meta: '🐢 Freshwater Swim' },
-                        { time: '14:00', icon: 'fa-umbrella-beach', name: 'Kalyvaki Beach Relaxation', desc: 'Unwind at shaded river-mouth cove beach.', meta: '🏖️ Chill' }
+                        { time: '10:00', icon: 'fa-water', name: 'Lake Kournas Turtle Swim', desc: 'Rent a pedal boat or swim in Crete’s only freshwater mountain lake.', meta: '🐢 Freshwater Swim', img: './images/crete_kournas.jpg' },
+                        { time: '14:00', icon: 'fa-umbrella-beach', name: 'Kalyvaki Beach Relaxation', desc: 'Unwind at shaded river-mouth cove beach.', meta: '🏖️ Chill', img: './images/falassarna_beach.jpg' }
                       ]
                     },
                     { day: 12, tag: 'Farewell & Departure', title: 'Souda Bay Viewpoint, CHQ Car Drop & Flight Home', coords: [35.5300, 24.1500],
                       activities: [
-                        { time: '12:00', icon: 'fa-bag-shopping', name: 'Souvenirs & Cretan Honey', desc: 'Pick up local mountain thyme honey and extra virgin olive oil.', meta: '🛍️ Local Gifts' },
-                        { time: '17:00', icon: 'fa-plane-departure', name: 'Transavia Flight to AMS', desc: 'Drop off rental car at CHQ airport and board flight back to Amsterdam.', meta: '✈️ Direct Flight Home' }
+                        { time: '12:00', icon: 'fa-bag-shopping', name: 'Souvenirs & Cretan Honey', desc: 'Pick up local mountain thyme honey and extra virgin olive oil.', meta: '🛍️ Local Gifts', img: './images/honey_souvenirs.jpg' },
+                        { time: '17:00', icon: 'fa-plane-departure', name: 'Transavia Flight to AMS', desc: 'Drop off rental car at CHQ airport and board flight back to Amsterdam.', meta: '✈️ Direct Flight Home', img: './images/flight_home.jpg' }
                       ]
                     }
                 ]
@@ -1224,7 +1248,7 @@
                 title: 'Albanian Riviera (Ksamil & Gjipe Canyon)',
                 subtitle: 'Crystal Turquoise Waters, Secret Coves & Super Budget Dining',
                 badge: 'Ultra Budget • Hidden Gem',
-                img: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80',
+                img: './images/albania_gjipe.jpg',
                 defaults: { flight: 380, car7: 140, car10: 200, car12: 240, hotelNight: 42, foodDay: 30, act: 50 },
                 center: [40.1500, 19.6000],
                 hotels: [
@@ -1241,69 +1265,69 @@
                 days: [
                     { day: 1, tag: 'Arrival & Himara', title: 'Arrival & Himara Promenade Sunset', coords: [40.1000, 19.7400],
                       activities: [
-                        { time: '15:00', icon: 'fa-car', name: 'Scenic Coastal Drive', desc: 'Drive down the winding coastal highway to Himara.', meta: '🚗 Coastal road' },
-                        { time: '18:00', icon: 'fa-person-walking', name: 'Himara Waterfront Stroll', desc: 'Chill on the promenade, drink local wine (€2/glass).', meta: '🚶 Easy evening' }
+                        { time: '15:00', icon: 'fa-car', name: 'Scenic Coastal Drive', desc: 'Drive down the winding coastal highway to Himara.', meta: '🚗 Coastal road', img: './images/albania_llogara.jpg' },
+                        { time: '18:00', icon: 'fa-person-walking', name: 'Himara Waterfront Stroll', desc: 'Chill on the promenade, drink local wine (€2/glass).', meta: '🚶 Easy evening', img: './images/albania_himara.jpg' }
                       ]
                     },
                     { day: 2, tag: 'Secret Cove Hike', title: 'Gjipe Canyon & Secret Beach Walk', coords: [40.1270, 19.6700],
                       activities: [
-                        { time: '09:00', icon: 'fa-person-hiking', name: 'Gjipe Trail Walk', desc: 'Scenic 40-min trail through red rock canyon down to secluded cove.', meta: '🥾 3 km walk • Easy' },
-                        { time: '11:00', icon: 'fa-water', name: 'Gjipe Beach Chilling', desc: 'Swim in sea caves & relax at eco beach bar.', meta: '🏖️ Turquoise Sea' }
+                        { time: '09:00', icon: 'fa-person-hiking', name: 'Gjipe Trail Walk', desc: 'Scenic 40-min trail through red rock canyon down to secluded cove.', meta: '🥾 3 km walk • Easy', img: './images/albania_gjipe.jpg' },
+                        { time: '11:00', icon: 'fa-water', name: 'Gjipe Beach Chilling', desc: 'Swim in sea caves & relax at eco beach bar.', meta: '🏖️ Turquoise Sea', img: './images/albania_gjipe.jpg' }
                       ]
                     },
                     { day: 3, tag: 'Sea & Castle', title: 'Jale Beach & Porto Palermo Castle', coords: [40.0600, 19.7900],
                       activities: [
-                        { time: '10:00', icon: 'fa-shield-halved', name: 'Ali Pasha Castle Discovery', desc: 'Explore triangular seaside fortress surrounded by blue bay.', meta: '🏛️ €3 entry' },
-                        { time: '13:00', icon: 'fa-umbrella-beach', name: 'Jale Beach Relaxation', desc: 'Crystal clear sea & fresh seafood lunch (€15 for 2).', meta: '🍽️ Super Budget' }
+                        { time: '10:00', icon: 'fa-shield-halved', name: 'Ali Pasha Castle Discovery', desc: 'Explore triangular seaside fortress surrounded by blue bay.', meta: '🏛️ €3 entry', img: './images/albania_porto_palermo.jpg' },
+                        { time: '13:00', icon: 'fa-umbrella-beach', name: 'Jale Beach Relaxation', desc: 'Crystal clear sea & fresh seafood lunch (€15 for 2).', meta: '🍽️ Super Budget', img: './images/seafood_lunch.jpg' }
                       ]
                     },
                     { day: 4, tag: 'Islands & Swimming', title: 'Ksamil Archipelago & Swimming', coords: [39.7700, 19.9900],
                       activities: [
-                        { time: '09:30', icon: 'fa-water', name: 'Ksamil Twin Islands Swim', desc: 'Swim or kayak to uninhabited green islets.', meta: '🏊 Warm sea' },
-                        { time: '17:00', icon: 'fa-sun', name: 'Sunset Cocktail', desc: 'Beachside lounge drinks with view of Corfu island.', meta: '🌅 Sunset chill' }
+                        { time: '09:30', icon: 'fa-water', name: 'Ksamil Twin Islands Swim', desc: 'Swim or kayak to uninhabited green islets.', meta: '🏊 Warm sea', img: './images/albania_ksamil.jpg' },
+                        { time: '17:00', icon: 'fa-sun', name: 'Sunset Cocktail', desc: 'Beachside lounge drinks with view of Corfu island.', meta: '🌅 Sunset chill', img: './images/sunset_cocktail.jpg' }
                       ]
                     },
                     { day: 5, tag: 'UNESCO Discovery', title: 'Butrint Ancient National Park Hike', coords: [39.7400, 20.0200],
                       activities: [
-                        { time: '09:00', icon: 'fa-monument', name: 'Butrint Shaded Ruins Walk', desc: 'Hike through oak forests to Greek & Roman amphitheatres.', meta: '🥾 4 km walk' },
-                        { time: '14:00', icon: 'fa-water', name: 'Mussel House Lunch', desc: 'Fresh lake mussels by the lagoon shore.', meta: '🍽️ Fresh Mussels' }
+                        { time: '09:00', icon: 'fa-monument', name: 'Butrint Shaded Ruins Walk', desc: 'Hike through oak forests to Greek & Roman amphitheatres.', meta: '🥾 4 km walk', img: './images/albania_butrint.jpg' },
+                        { time: '14:00', icon: 'fa-water', name: 'Mussel House Lunch', desc: 'Fresh lake mussels by the lagoon shore.', meta: '🍽️ Fresh Mussels', img: './images/seafood_lunch.jpg' }
                       ]
                     },
                     { day: 6, tag: 'Mountain Pass', title: 'Llogara National Park Pine Hike', coords: [40.1900, 19.5900],
                       activities: [
-                        { time: '09:00', icon: 'fa-mountain', name: 'Llogara Mountain Trail', desc: 'Pine forest walk with dramatic 1,000m cliff drop view to Ionian Sea.', meta: '🥾 5 km walk' },
-                        { time: '14:00', icon: 'fa-umbrella-beach', name: 'Dhermi Drymades Beach', desc: 'Relax on white pebble beach.', meta: '🏖️ Chill' }
+                        { time: '09:00', icon: 'fa-mountain', name: 'Llogara Mountain Trail', desc: 'Pine forest walk with dramatic 1,000m cliff drop view to Ionian Sea.', meta: '🥾 5 km walk', img: './images/albania_llogara.jpg' },
+                        { time: '14:00', icon: 'fa-umbrella-beach', name: 'Dhermi Drymades Beach', desc: 'Relax on white pebble beach.', meta: '🏖️ Chill', img: './images/albania_himara.jpg' }
                       ]
                     },
                     { day: 7, tag: 'Castle Village', title: 'Old Himara Village & Cliff View', coords: [40.1100, 19.7400],
                       activities: [
-                        { time: '10:00', icon: 'fa-building-columns', name: 'Himara Old Town Ruins Walk', desc: 'Explore hilltop Byzantine stone houses and old churches.', meta: '🥾 2 km walk' },
-                        { time: '18:00', icon: 'fa-utensils', name: 'Traditional Byrek & Wine Dinner', desc: 'Enjoy local spinach byrek and mountain tea.', meta: '🍽️ €10 total' }
+                        { time: '10:00', icon: 'fa-building-columns', name: 'Himara Old Town Ruins Walk', desc: 'Explore hilltop Byzantine stone houses and old churches.', meta: '🥾 2 km walk', img: './images/albania_himara.jpg' },
+                        { time: '18:00', icon: 'fa-utensils', name: 'Traditional Byrek & Wine Dinner', desc: 'Enjoy local spinach byrek and mountain tea.', meta: '🍽️ €10 total', img: './images/byrek_wine.jpg' }
                       ]
                     },
                     { day: 8, tag: 'Blue Eye Spring', title: 'Syri i Kaltër (Blue Eye) Nature Walk', coords: [39.9200, 20.1900],
                       activities: [
-                        { time: '09:30', icon: 'fa-eye', name: 'Blue Eye Spring Walk', desc: 'Easy park walk to mesmerizing electric blue water spring.', meta: '🥾 2 km walk' }
+                        { time: '09:30', icon: 'fa-eye', name: 'Blue Eye Spring Walk', desc: 'Easy park walk to mesmerizing electric blue water spring.', meta: '🥾 2 km walk', img: './images/blue_eye_spring.jpg' }
                       ]
                     },
                     { day: 9, tag: 'Cove Hop', title: 'Bunec & Lukova Cove Exploration', coords: [40.0100, 19.9100],
                       activities: [
-                        { time: '10:00', icon: 'fa-umbrella-beach', name: 'Lukova Quiet Beach', desc: 'Uncrowded olive grove beach.', meta: '🏖️ Quiet Sea' }
+                        { time: '10:00', icon: 'fa-umbrella-beach', name: 'Lukova Quiet Beach', desc: 'Uncrowded olive grove beach.', meta: '🏖️ Quiet Sea', img: './images/albania_gjipe.jpg' }
                       ]
                     },
                     { day: 10, tag: 'Cove Hop', title: 'Bunec & Lukova Cove Exploration', coords: [40.0100, 19.9100],
                       activities: [
-                        { time: '10:00', icon: 'fa-umbrella-beach', name: 'Lukova Quiet Beach', desc: 'Uncrowded olive grove beach.', meta: '🏖️ Quiet Sea' }
+                        { time: '10:00', icon: 'fa-umbrella-beach', name: 'Lukova Quiet Beach', desc: 'Uncrowded olive grove beach.', meta: '🏖️ Quiet Sea', img: './images/albania_gjipe.jpg' }
                       ]
                     },
                     { day: 11, tag: 'Secret Cove', title: 'Krorëza & Kakome Hidden Beach Boat Trip', coords: [39.9100, 19.8900],
                       activities: [
-                        { time: '10:00', icon: 'fa-ship', name: 'Krorëza Beach Boat Swim', desc: 'Take local boat to pristine white sand beach surrounded by wild cliffs.', meta: '🏖️ Pristine Sea' }
+                        { time: '10:00', icon: 'fa-ship', name: 'Krorëza Beach Boat Swim', desc: 'Take local boat to pristine white sand beach surrounded by wild cliffs.', meta: '🏖️ Pristine Sea', img: './images/boat_cruise.jpg' }
                       ]
                     },
                     { day: 12, tag: 'Departure', title: 'Coast Drive, Car Drop & Flight Home to Netherlands', coords: [40.1000, 19.7400],
                       activities: [
-                        { time: '11:00', icon: 'fa-plane-departure', name: 'Return Flight to AMS/EIN', desc: 'Return car & board flight home.', meta: '✈️ Safe Travels' }
+                        { time: '11:00', icon: 'fa-plane-departure', name: 'Return Flight to AMS/EIN', desc: 'Return car & board flight home.', meta: '✈️ Safe Travels', img: './images/flight_home.jpg' }
                       ]
                     }
                 ]
@@ -1312,7 +1336,7 @@
                 title: 'Madeira Island, Portugal',
                 subtitle: 'Dramatic Coastal Cliff Hikes & Volcanic Ocean Pools',
                 badge: 'Scenic Nature • Sea & Levadas',
-                img: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=800&q=80',
+                img: './images/madeira_sao_lourenco.jpg',
                 defaults: { flight: 540, car7: 180, car10: 250, car12: 300, hotelNight: 65, foodDay: 45, act: 70 },
                 center: [32.7600, -16.9500],
                 hotels: [
@@ -1328,65 +1352,65 @@
                 days: [
                     { day: 1, tag: 'Arrival & Funchal', title: 'Arrival in Funchal & Waterfront Stroll', coords: [32.6500, -16.9000],
                       activities: [
-                        { time: '14:00', icon: 'fa-car', name: 'Car Pickup & Drive', desc: 'Pick up car, drive 20 mins to coastal studio.', meta: '🚗 Easy drive' },
-                        { time: '17:00', icon: 'fa-cocktail', name: 'Poncha Tasting by the Sea', desc: 'Try traditional passion fruit poncha.', meta: '🍹 Local drink' }
+                        { time: '14:00', icon: 'fa-car', name: 'Car Pickup & Drive', desc: 'Pick up car, drive 20 mins to coastal studio.', meta: '🚗 Easy drive', img: './images/madeira_sao_lourenco.jpg' },
+                        { time: '17:00', icon: 'fa-cocktail', name: 'Poncha Tasting by the Sea', desc: 'Try traditional passion fruit poncha.', meta: '🍹 Local drink', img: './images/madeira_sao_lourenco.jpg' }
                       ]
                     },
                     { day: 2, tag: 'Cliff Hike & Sea', title: 'Ponta de São Lourenço Coastal Cliff Walk', coords: [32.7430, -16.7000],
                       activities: [
-                        { time: '08:30', icon: 'fa-person-hiking', name: 'São Lourenço Cliff Trail', desc: 'Dramatic ocean cliff hike with blue sea on both sides.', meta: '🥾 7 km • Moderate' },
-                        { time: '13:00', icon: 'fa-water', name: 'Cais do Sardinha Swim', desc: 'Dip in crystal cove at trail end.', meta: '🏊 Refreshing swim' }
+                        { time: '08:30', icon: 'fa-person-hiking', name: 'São Lourenço Cliff Trail', desc: 'Dramatic ocean cliff hike with blue sea on both sides.', meta: '🥾 7 km • Moderate', img: './images/madeira_sao_lourenco.jpg' },
+                        { time: '13:00', icon: 'fa-water', name: 'Cais do Sardinha Swim', desc: 'Dip in crystal cove at trail end.', meta: '🏊 Refreshing swim', img: './images/madeira_porto_moniz.jpg' }
                       ]
                     },
                     { day: 3, tag: 'Volcanic Pools', title: 'Porto Moniz Volcanic Sea Pools & Seixal Beach', coords: [32.8670, -17.1670],
                       activities: [
-                        { time: '10:00', icon: 'fa-swimming-pool', name: 'Porto Moniz Lava Pools', desc: 'Swim in natural basalt rock sea pools.', meta: '🏖️ Natural pools' },
-                        { time: '14:00', icon: 'fa-umbrella-beach', name: 'Seixal Black Sand Beach', desc: 'Lush green cliff backdrop over black volcanic sand.', meta: '🏖️ Scenic Beach' }
+                        { time: '10:00', icon: 'fa-swimming-pool', name: 'Porto Moniz Lava Pools', desc: 'Swim in natural basalt rock sea pools.', meta: '🏖️ Natural pools', img: './images/madeira_porto_moniz.jpg' },
+                        { time: '14:00', icon: 'fa-umbrella-beach', name: 'Seixal Black Sand Beach', desc: 'Lush green cliff backdrop over black volcanic sand.', meta: '🏖️ Scenic Beach', img: './images/madeira_sao_lourenco.jpg' }
                       ]
                     },
                     { day: 4, tag: 'Easy Levada Walk', title: 'Levada dos Balcões & Ribeiro Frio', coords: [32.7330, -16.8830],
                       activities: [
-                        { time: '09:30', icon: 'fa-person-hiking', name: 'Levada dos Balcões Walk', desc: 'Flat 3 km shaded levada walk to stunning balcony viewpoint.', meta: '🥾 3 km • Very Easy' }
+                        { time: '09:30', icon: 'fa-person-hiking', name: 'Levada dos Balcões Walk', desc: 'Flat 3 km shaded levada walk to stunning balcony viewpoint.', meta: '🥾 3 km • Very Easy', img: './images/madeira_sao_lourenco.jpg' }
                       ]
                     },
                     { day: 5, tag: 'Sun & Waterfall', title: 'Cascata dos Anjos & Ponta do Sol Sunset', coords: [32.6800, -17.1000],
                       activities: [
-                        { time: '10:00', icon: 'fa-shower', name: 'Waterfall Drive-through', desc: 'See waterfall cascading right onto coastal road.', meta: '🚗 Fun spot' }
+                        { time: '10:00', icon: 'fa-shower', name: 'Waterfall Drive-through', desc: 'See waterfall cascading right onto coastal road.', meta: '🚗 Fun spot', img: './images/madeira_porto_moniz.jpg' }
                       ]
                     },
                     { day: 6, tag: 'Old Town Discovery', title: 'Funchal Old Town & Cable Car Stroll', coords: [32.6500, -16.9000],
                       activities: [
-                        { time: '10:00', icon: 'fa-paint-roller', name: 'Rua de Santa Maria Painted Doors', desc: 'Explore art alleys & Mercados dos Lavradores market.', meta: '🏛️ Discovery' }
+                        { time: '10:00', icon: 'fa-paint-roller', name: 'Rua de Santa Maria Painted Doors', desc: 'Explore art alleys & Mercados dos Lavradores market.', meta: '🏛️ Discovery', img: './images/madeira_sao_lourenco.jpg' }
                       ]
                     },
                     { day: 7, tag: 'High Peak View', title: 'Pico do Arieiro Scenic Lookout Walk', coords: [32.7350, -16.9280],
                       activities: [
-                        { time: '08:30', icon: 'fa-cloud-sun', name: 'Pico do Arieiro Clouds Walk', desc: 'Drive above clouds to 1818m summit lookout walk.', meta: '🥾 1.5 km easy stroll' }
+                        { time: '08:30', icon: 'fa-cloud-sun', name: 'Pico do Arieiro Clouds Walk', desc: 'Drive above clouds to 1818m summit lookout walk.', meta: '🥾 1.5 km easy stroll', img: './images/madeira_sao_lourenco.jpg' }
                       ]
                     },
                     { day: 8, tag: 'Quiet Cove', title: 'Calheta Golden Sand Beach Chill', coords: [32.7180, -17.1780],
                       activities: [
-                        { time: '10:00', icon: 'fa-umbrella-beach', name: 'Calheta Beach Swim', desc: 'Protected warm golden sand cove.', meta: '🏖️ Beach Chill' }
+                        { time: '10:00', icon: 'fa-umbrella-beach', name: 'Calheta Beach Swim', desc: 'Protected warm golden sand cove.', meta: '🏖️ Beach Chill', img: './images/madeira_porto_moniz.jpg' }
                       ]
                     },
                     { day: 9, tag: 'Forest Trail', title: 'Fanal Ancient Laurel Forest Stroll', coords: [32.8000, -17.1330],
                       activities: [
-                        { time: '10:00', icon: 'fa-tree', name: 'Fanal Mystical Trees Walk', desc: 'Walk among 500-year-old laurel trees.', meta: '🥾 3 km walk' }
+                        { time: '10:00', icon: 'fa-tree', name: 'Fanal Mystical Trees Walk', desc: 'Walk among 500-year-old laurel trees.', meta: '🥾 3 km walk', img: './images/madeira_sao_lourenco.jpg' }
                       ]
                     },
                     { day: 10, tag: 'Plateau Walk', title: 'Paul da Serra Plateau & Rabaçal Waterfalls', coords: [32.7500, -17.1300],
                       activities: [
-                        { time: '09:30', icon: 'fa-waterfall', name: '25 Fontes Levada Trail', desc: 'Shaded levada trail through green valley to waterfall pool.', meta: '🥾 5 km walk' }
+                        { time: '09:30', icon: 'fa-waterfall', name: '25 Fontes Levada Trail', desc: 'Shaded levada trail through green valley to waterfall pool.', meta: '🥾 5 km walk', img: './images/madeira_porto_moniz.jpg' }
                       ]
                     },
                     { day: 11, tag: 'Coastal Village', title: 'Jardim do Mar & Paul do Mar Sunset Walk', coords: [32.7500, -17.2100],
                       activities: [
-                        { time: '10:00', icon: 'fa-person-walking-luggage', name: 'Fishermen Promenade Walk', desc: 'Walk cobblestone ocean paths between banana plantations.', meta: '🥾 3 km walk' }
+                        { time: '10:00', icon: 'fa-person-walking-luggage', name: 'Fishermen Promenade Walk', desc: 'Walk cobblestone ocean paths between banana plantations.', meta: '🥾 3 km walk', img: './images/madeira_sao_lourenco.jpg' }
                       ]
                     },
                     { day: 12, tag: 'Farewell', title: 'Ponta do Pargo Lighthouse, Car Drop & Flight Home', coords: [32.8000, -17.2500],
                       activities: [
-                        { time: '11:00', icon: 'fa-plane-departure', name: 'Flight Home to AMS', desc: 'Return car at FNC & flight back to Netherlands.', meta: '✈️ Safe Travels' }
+                        { time: '11:00', icon: 'fa-plane-departure', name: 'Flight Home to AMS', desc: 'Return car at FNC & flight back to Netherlands.', meta: '✈️ Safe Travels', img: './images/madeira_sao_lourenco.jpg' }
                       ]
                     }
                 ]
@@ -1395,7 +1419,7 @@
                 title: 'Mallorca (Tramuntana Coast), Spain',
                 subtitle: 'Scenic Cliff Drives, Cove Walks & Mountain Villages',
                 badge: 'Classic Mediterranean',
-                img: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=800&q=80',
+                img: './images/mallorca_soller.jpg',
                 defaults: { flight: 360, car7: 170, car10: 240, car12: 280, hotelNight: 75, foodDay: 50, act: 80 },
                 center: [39.7500, 2.7000],
                 hotels: [
@@ -1409,25 +1433,25 @@
                     { route: 'Economy Rental Car (PMI Airport)', airline: 'Goldcar / OK Mobility', cost: 280, note: 'Full 12 days compact car' }
                 ],
                 days: [
-                    { day: 1, tag: 'Arrival & Sóller', title: 'Arrival & Port de Sóller Promenade', coords: [39.7900, 2.6900], activities: [{ time: '16:00', icon: 'fa-tram', name: 'Vintage Tram View', desc: 'Watch historic wooden tram roll past harbor.', meta: '🚋 Charm' }] },
-                    { day: 2, tag: 'Cove Hike', title: 'Deià to Cala Deià Coastal Trail Walk', coords: [39.7480, 2.6480], activities: [{ time: '09:30', icon: 'fa-person-hiking', name: 'Cala Deià Trail', desc: 'Walk down olive groves to stone cove beach.', meta: '🥾 3 km walk' }] },
-                    { day: 3, tag: 'Torrent de Pareis', title: 'Sa Calobra & Torrent de Pareis Gorge Walk', coords: [39.8470, 2.8170], activities: [{ time: '09:00', icon: 'fa-road', name: 'Sa Calobra Winding Drive', desc: 'Drive famous snake road to sea gorge entrance.', meta: '🚗 Scenic drive' }] },
-                    { day: 4, tag: 'Village Discovery', title: 'Valldemossa Cobblestone Stroll', coords: [39.7110, 2.6220], activities: [{ time: '10:00', icon: 'fa-city', name: 'Valldemossa Alleys', desc: 'Explore Chopin village & coca de patata bakery.', meta: '🏛️ Village walk' }] },
-                    { day: 5, tag: 'Cape View', title: 'Cap de Formentor Lighthouse Trail', coords: [39.9600, 3.2100], activities: [{ time: '09:00', icon: 'fa-lighthouse', name: 'Formentor Viewpoint', desc: 'Dramatic cliff view over northern tip.', meta: '🌅 Views' }] },
-                    { day: 6, tag: 'Sea & Sand', title: 'Cala Mondragó Natural Park Beach', coords: [39.3500, 3.1900], activities: [{ time: '10:00', icon: 'fa-umbrella-beach', name: 'Mondragó Pines & Sea', desc: 'Swim in pine-fringed double cove.', meta: '🏖️ Beach' }] },
-                    { day: 7, tag: 'Palma Old Town', title: 'Palma Cathedral & Old Alleys', coords: [39.5667, 2.6500], activities: [{ time: '10:00', icon: 'fa-church', name: 'La Seu Cathedral Stroll', desc: 'Gothic cathedral & tapas lunch.', meta: '🏛️ City walk' }] },
-                    { day: 8, tag: 'Mountain Hike', title: 'Cúber Reservoir Mountain Trail', coords: [39.7800, 2.7800], activities: [{ time: '09:00', icon: 'fa-mountain', name: 'Cúber Lake Walk', desc: 'Flat lake walk under Puig Major peak.', meta: '🥾 5 km walk' }] },
-                    { day: 9, tag: 'Calas Hopping', title: 'Cala Santanyí Cove Swim', coords: [39.3300, 3.1400], activities: [{ time: '10:00', icon: 'fa-water', name: 'Es Pontàs Sea Arch View', desc: 'View natural sea arch.', meta: '🏊 Swim' }] },
-                    { day: 10, tag: 'Scenic Cove', title: 'Cala Tuent Winding Drive & Quiet Beach', coords: [39.8400, 2.7700], activities: [{ time: '10:00', icon: 'fa-car', name: 'Coastal Drive to Cala Tuent', desc: 'Drive quiet coastal road to secluded pebble bay.', meta: '🏖️ Uncrowded Sea' }] },
-                    { day: 11, tag: 'Olive Groves', title: 'Biniaraix Gorge Walk & Orange Orchards', coords: [39.7600, 2.7200], activities: [{ time: '09:30', icon: 'fa-person-hiking', name: 'Barranc de Biniaraix Walk', desc: 'Walk old stone stepped path through ancient terraced olive groves.', meta: '🥾 4 km walk' }] },
-                    { day: 12, tag: 'Departure', title: 'Palma Airport Return & Flight Home', coords: [39.5500, 2.7300], activities: [{ time: '11:00', icon: 'fa-plane-departure', name: 'Flight Home to AMS', desc: 'Return car & board flight back to Netherlands.', meta: '✈️ Safe Travels' }] }
+                    { day: 1, tag: 'Arrival & Sóller', title: 'Arrival & Port de Sóller Promenade', coords: [39.7900, 2.6900], activities: [{ time: '16:00', icon: 'fa-tram', name: 'Vintage Tram View', desc: 'Watch historic wooden tram roll past harbor.', meta: '🚋 Charm', img: './images/mallorca_soller.jpg' }] },
+                    { day: 2, tag: 'Cove Hike', title: 'Deià to Cala Deià Coastal Trail Walk', coords: [39.7480, 2.6480], activities: [{ time: '09:30', icon: 'fa-person-hiking', name: 'Cala Deià Trail', desc: 'Walk down olive groves to stone cove beach.', meta: '🥾 3 km walk', img: './images/canyon_hike.jpg' }] },
+                    { day: 3, tag: 'Torrent de Pareis', title: 'Sa Calobra & Torrent de Pareis Gorge Walk', coords: [39.8470, 2.8170], activities: [{ time: '09:00', icon: 'fa-road', name: 'Sa Calobra Winding Drive', desc: 'Drive famous snake road to sea gorge entrance.', meta: '🚗 Scenic drive', img: './images/mallorca_sa_calobra.jpg' }] },
+                    { day: 4, tag: 'Village Discovery', title: 'Valldemossa Cobblestone Stroll', coords: [39.7110, 2.6220], activities: [{ time: '10:00', icon: 'fa-city', name: 'Valldemossa Alleys', desc: 'Explore Chopin village & coca de patata bakery.', meta: '🏛️ Village walk', img: './images/mallorca_valldemossa.jpg' }] },
+                    { day: 5, tag: 'Cape View', title: 'Cap de Formentor Lighthouse Trail', coords: [39.9600, 3.2100], activities: [{ time: '09:00', icon: 'fa-lighthouse', name: 'Formentor Viewpoint', desc: 'Dramatic cliff view over northern tip.', meta: '🌅 Views', img: './images/mallorca_formentor.jpg' }] },
+                    { day: 6, tag: 'Sea & Sand', title: 'Cala Mondragó Natural Park Beach', coords: [39.3500, 3.1900], activities: [{ time: '10:00', icon: 'fa-umbrella-beach', name: 'Mondragó Pines & Sea', desc: 'Swim in pine-fringed double cove.', meta: '🏖️ Beach', img: './images/sea_swim.jpg' }] },
+                    { day: 7, tag: 'Palma Old Town', title: 'Palma Cathedral & Old Alleys', coords: [39.5667, 2.6500], activities: [{ time: '10:00', icon: 'fa-church', name: 'La Seu Cathedral Stroll', desc: 'Gothic cathedral & tapas lunch.', meta: '🏛️ City walk', img: './images/ancient_ruins.jpg' }] },
+                    { day: 8, tag: 'Mountain Hike', title: 'Cúber Reservoir Mountain Trail', coords: [39.7800, 2.7800], activities: [{ time: '09:00', icon: 'fa-mountain', name: 'Cúber Lake Walk', desc: 'Flat lake walk under Puig Major peak.', meta: '🥾 5 km walk', img: './images/freshwater_lake.jpg' }] },
+                    { day: 9, tag: 'Calas Hopping', title: 'Cala Santanyí Cove Swim', coords: [39.3300, 3.1400], activities: [{ time: '10:00', icon: 'fa-water', name: 'Es Pontàs Sea Arch View', desc: 'View natural sea arch.', meta: '🏊 Swim', img: './images/sardinia_pinnacle.jpg' }] },
+                    { day: 10, tag: 'Scenic Cove', title: 'Cala Tuent Winding Drive & Quiet Beach', coords: [39.8400, 2.7700], activities: [{ time: '10:00', icon: 'fa-car', name: 'Coastal Drive to Cala Tuent', desc: 'Drive quiet coastal road to secluded pebble bay.', meta: '🏖️ Uncrowded Sea', img: './images/car_drive.jpg' }] },
+                    { day: 11, tag: 'Olive Groves', title: 'Biniaraix Gorge Walk & Orange Orchards', coords: [39.7600, 2.7200], activities: [{ time: '09:30', icon: 'fa-person-hiking', name: 'Barranc de Biniaraix Walk', desc: 'Walk old stone stepped path through ancient terraced olive groves.', meta: '🥾 4 km walk', img: './images/canyon_hike.jpg' }] },
+                    { day: 12, tag: 'Departure', title: 'Palma Airport Return & Flight Home', coords: [39.5500, 2.7300], activities: [{ time: '11:00', icon: 'fa-plane-departure', name: 'Flight Home to AMS', desc: 'Return car & board flight back to Netherlands.', meta: '✈️ Safe Travels', img: './images/flight_home.jpg' }] }
                 ]
             },
             'sardinia-east': {
                 title: 'Sardinia (Golfo di Orosei), Italy',
                 subtitle: 'Lime Pinnacle Hikes & World-Class Emerald Coves',
                 badge: 'Wild Sea & Trails',
-                img: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80',
+                img: './images/sardinia_goloritze.jpg',
                 defaults: { flight: 460, car7: 190, car10: 270, car12: 320, hotelNight: 70, foodDay: 45, act: 90 },
                 center: [40.2800, 9.6300],
                 hotels: [
@@ -1609,12 +1633,16 @@
                 <div class="activities-timeline">
                     ${d.activities.map(act => `
                         <div class="act-card">
-                            <div class="act-icon"><i class="fa-solid ${act.icon}"></i></div>
+                            <div class="act-img-box">
+                                <img src="${act.img || dest.img}" alt="" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80';">
+                            </div>
                             <div class="act-content">
-                                <div class="act-time">${act.time}</div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
+                                    <div class="act-time"><i class="fa-solid ${act.icon}"></i> ${act.time}</div>
+                                    <div class="act-meta"><span>${act.meta}</span></div>
+                                </div>
                                 <div class="act-name">${act.name}</div>
                                 <div class="act-desc">${act.desc}</div>
-                                <div class="act-meta"><span>${act.meta}</span></div>
                             </div>
                         </div>
                     `).join('')}
