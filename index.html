@@ -1,19 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="7 to 10-Day Budget Sea Vacation Planner for 2 People - Chilling, Minor Hiking, and Coastal Discovery">
     <title>7-10 Day Budget Sea Vacation Planner (For 2 Adults)</title>
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
+
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Leaflet.js Map CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
@@ -48,7 +49,7 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 15% 20%, rgba(20, 184, 166, 0.15) 0%, transparent 45%),
                 radial-gradient(circle at 85% 75%, rgba(244, 63, 94, 0.08) 0%, transparent 45%);
             background-attachment: fixed;
@@ -1470,7 +1471,7 @@
             });
             document.getElementById('days-count-span').textContent = days;
             document.getElementById('calc-days-span').textContent = days;
-            
+
             const dest = destinationsData[activeDestKey];
             if (dest) {
                 document.getElementById('calc-car').value = days === 12 ? dest.defaults.car12 : (days === 10 ? dest.defaults.car10 : dest.defaults.car7);
